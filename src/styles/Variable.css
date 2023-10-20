@@ -1,0 +1,26 @@
+:root {
+    /* colors */
+    --black: #1c1c1c;
+    --text: #74189e;
+    --border: #32035e;
+    /* styles */
+    --input-border: 2px solid var(--black);
+    --PhoneInput-color--focus: magenta;
+	--PhoneInputInternationalIconPhone-opacity: 0.8;
+	--PhoneInputInternationalIconGlobe-opacity: 0.65;
+	--PhoneInputCountrySelect-marginRight: 0.35em;
+	--PhoneInputCountrySelectArrow-width: 0.3em;
+	--PhoneInputCountrySelectArrow-marginLeft: var(--PhoneInputCountrySelect-marginRight);
+	--PhoneInputCountrySelectArrow-borderWidth: 1px;
+	--PhoneInputCountrySelectArrow-opacity: 0.45;
+	--PhoneInputCountrySelectArrow-color: magenta;
+	--PhoneInputCountrySelectArrow-color--focus: var(--PhoneInput-color--focus);
+	--PhoneInputCountrySelectArrow-transform: rotate(45deg);
+	--PhoneInputCountryFlag-aspectRatio: 1.5;
+	--PhoneInputCountryFlag-height: 1em;
+	--PhoneInputCountryFlag-borderWidth: 1px;
+	--PhoneInputCountryFlag-borderColor: magenta;
+	--PhoneInputCountryFlag-borderColor--focus: var(--PhoneInput-color--focus);
+	--PhoneInputCountryFlag-backgroundColor--loading: magenta;
+}
+
