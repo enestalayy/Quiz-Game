@@ -1,19 +1,142 @@
 {
-  "posts": [
+  "quiz": {
+    "math": [
+      {
+        "id": 1,
+        "question": "3 x 4 = ?",
+        "options": [
+          {
+            "id": 1,
+            "option": "12",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "7"
+          },
+          {
+            "id": 3,
+            "option": "0"
+          }
+        ],
+        "selectedOptionId": null,
+        "point": 30
+      },
+      {
+        "id": 2,
+        "question": "5 + 5 = ?",
+        "options": [
+          {
+            "id": 1,
+            "option": "25"
+          },
+          {
+            "id": 2,
+            "option": "10",
+            "isAnswer": true
+          },
+          {
+            "id": 3,
+            "option": "124"
+          }
+        ],
+        "selectedOptionId": null,
+        "point": 30
+      },
+      {
+        "id": 3,
+        "question": "10 x 10 = ?",
+        "options": [
+          {
+            "id": 1,
+            "option": "100",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "20"
+          },
+          {
+            "id": 3,
+            "option": "10"
+          }
+        ],
+        "selectedOptionId": null,
+        "point": 40
+      }
+    ],
+    "geography": [
+      {
+        "id": 1,
+        "question": "Bu bir coğrafya sorusudur!",
+        "options": [
+          {
+            "id": 1,
+            "option": "12",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "7"
+          },
+          {
+            "id": 3,
+            "option": "0"
+          }
+        ],
+        "selectedOptionId": null,
+        "point": 30
+      }
+    ],
+    "art": [
+      {
+        "id": 1,
+        "question": "Bu bir Sanat sorusudur!",
+        "options": [
+          {
+            "id": 1,
+            "option": "12",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "7"
+          },
+          {
+            "id": 3,
+            "option": "0"
+          }
+        ],
+        "selectedOptionId": null,
+        "point": 30
+      }
+    ],
+    "general knowledge": [
+
+    ],
+    "science": [
+
+    ],
+    "history": [
+
+    ],
+    "sport": [
+
+    ],
+    "entertaintment": [
+
+    ]
+  },
+  "scoreboard": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "username": "test",
+      "point": 60,
+      "id": 1
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "username": "Enes",
+      "point": 100,
+      "id": 2
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
