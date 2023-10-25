@@ -1,7 +1,7 @@
 import React from 'react'
 import {Routes, Route} from 'react-router-dom'
-import Questions from '../components/Quiz/Questions'
-import Categories from '../components/Quiz/Categories'
+import Quiz from './Quiz'
+import Categories from './Categories'
 import ScoreBoard from './ScoreBoard'
 import Login from '../components/Login'
 
@@ -15,10 +15,10 @@ function Home() {
 
         
         <Routes>
-        <Route path='' element={ <Login /> }></Route>
+        <Route path='/' element={ <Login /> }></Route>
         <Route path='/categories' element={ <Categories /> }></Route>
-        <Route path='/quiz/:category' element={ <Questions /> }></Route>
-        <Route path='/scoreboard' element={<ScoreBoard/>}></Route>
+        <Route path='/quiz/:category' element={ <Quiz /> }></Route>
+        <Route path='/:category/scoreboard' element={<ScoreBoard/>}></Route>
 
       </Routes>
     </div>

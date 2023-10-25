@@ -18,10 +18,10 @@ useEffect(() => {
         <h1>Categories</h1>
         <div className="categories">
             {categories.map((key) => 
+            
                 <button className='categoryButton' key={key} onClick={() => navigate('/quiz/' + key, {state: { category: key }})}>{key}</button>
             )}
         </div>
-
     </div>
   )
 }

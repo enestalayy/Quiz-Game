@@ -17,21 +17,19 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    axios.get("http://localhost:3000/scoreboard")
+    axios.get(`http://localhost:3000/scoreboard?username=${e.target.value}`)
       .then((response) => {
         // scoreboard dizisinde kullanıcı adıyla eşleşen bir öğe var mı diye bak
-        console.log(username)
-        let usernames = response.data.map((user) => user.username)
-        
-        const userExists = usernames.includes(username)         
+        console.log(response.data)
+        const userExists = response.data === e.target.value         
         //  console.log(response.data((user) => user.id))
         if (userExists) {
           // eğer varsa, hata mesajı göster
           setError("This username already exists.");
-        } else if (!userExists) {
+        } else {
           navigate("/categories")
           axios.post("http://localhost:3000/scoreboard", {
+            id: username,
             username: username,
             score: 0,
           })
@@ -43,7 +41,7 @@ function Login() {
           });
             // eğer yoksa, hata mesajını temizle
             setError("");
-        }
+          }
       })
       .catch((error) => {
         console.log(error);
