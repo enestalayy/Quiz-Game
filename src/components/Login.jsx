@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import  {useDispatch} from 'react-redux'
+import { setUserName } from '../Store/userNameSlice'
 import UserName from "./Login/UserName";
 import Phone from "./Login/Phone";
 import Email from "./Login/Email";
@@ -9,19 +11,17 @@ import Gender from "./Login/Gender";
 function Login() {
   const navigate = useNavigate()
   const [username, setUsername] = useState("");
+  const dispatch = useDispatch()
   const [error, setError] = useState("");
 
-  const handleUsernameChange = (value) => {
-    setUsername(value);
-  };
+ 
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+    dispatch(setUserName(username))
     axios.get("http://localhost:3000/scoreboard")
       .then((response) => {
         // scoreboard dizisinde kullanıcı adıyla eşleşen bir öğe var mı diye bak
-        console.log(username)
         let usernames = response.data.map((user) => user.username)
         
         const userExists = usernames.includes(username)         
@@ -33,7 +33,6 @@ function Login() {
           navigate("/categories")
           axios.post("http://localhost:3000/scoreboard", {
             username: username,
-            score: 0,
           })
           .then((response) => {
             console.log(response.data);
@@ -50,6 +49,7 @@ function Login() {
       });
     
   };
+
   return (
     <div className="container borderContainer">
       <form onSubmit={handleSubmit}>
@@ -57,7 +57,7 @@ function Login() {
           <label className="labelLogin" htmlFor="username">
             Username*
           </label>
-          <UserName onUsernameChange={handleUsernameChange} />
+          <UserName onUsernameChange={(value) => setUsername(value)} />
           {error && <p className="error">{error}</p>}
         </div>
         <div className="inputLogin">

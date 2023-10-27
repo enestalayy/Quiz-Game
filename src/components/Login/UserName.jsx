@@ -1,15 +1,8 @@
-import React, { useState } from "react";
-import axios from "axios";
+// UserName.jsx
+import React from "react";
 
-function UserName({ onUsernameChange }) {
-  const [username, setUsername] = useState("");
-
-  const handleChange = (e) => {
-    setUsername(e.target.value);
-    onUsernameChange(e.target.value);
-    
-  };
-
+function UserName({ username, onUsernameChange }) {
+  
   return (
     <div>
       <input
@@ -18,7 +11,7 @@ function UserName({ onUsernameChange }) {
         placeholder="Username"
         required
         value={username}
-        onChange={handleChange}
+        onChange={((e) => onUsernameChange(e.target.value))}
       />
     </div>
   );

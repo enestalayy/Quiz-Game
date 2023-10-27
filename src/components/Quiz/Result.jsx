@@ -8,7 +8,7 @@ const Result = () => {
   const { category } = useParams();
   const [scoreboard, setScoreboard] = useState([]);
   useEffect(() => {
-    axios.get('/scoreboard')
+    axios.get('http://localhost:3000/scoreboard')
       .then((response) => {
         setScoreboard(response.data);
       })
@@ -16,12 +16,11 @@ const Result = () => {
         console.error(error);
       });
   }, [category]);
-  console.log(scoreboard)
 
   return (
-    <div className="container">
+    <div>
       <h1>{category} Quiz Results</h1>
-      <table className="scoreboard-table"> 
+      <table> 
         <thead>
           <tr>
             <th>Username</th>
@@ -29,10 +28,12 @@ const Result = () => {
           </tr>
         </thead>
         <tbody>
-          {scoreboard[category].map((item) => ( // scoreboard dizisindeki her bir objeyi tablo satırına dönüştür
-            <tr key={item.id}>
-              <td>{item.username}</td>
-              <td>{item.point}</td>
+          {scoreboard.map((item) => ( 
+            <tr key={item.username}>
+              <td>{item[category] &&
+              item.username
+              }</td>
+              <td>{item[category]}</td>
             </tr>
           ))}
         </tbody>

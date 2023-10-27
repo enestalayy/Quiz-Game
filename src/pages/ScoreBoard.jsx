@@ -1,27 +1,23 @@
 import React,{useState, useEffect} from 'react'
-
+import Result from '../components/Quiz/Result'
+// import axios from 'axios'
 function ScoreBoard() {
-  const [scores, setScores] = useState([]); // soruları tutacak state
+  // const [scores, setScores] = useState([]);
 
-  useEffect(() => {
-      fetch('http://localhost:3000/scoreboard') // db.json dosyasının quiz arrayini fetch edin
-          .then(res => res.json()) // gelen cevabı json formatına dönüştürün
-          .then(data => {
-              setScores(data); // state'i gelen veriyle güncelleyin
-          })
-          .catch(err => {
-              // hata olması durumunda
-              console.error(err);
-          });
-  }, []);
-  console.log(scores[0].username)
+  // useEffect(() => {
+  //     axios.get('http://localhost:3000/scoreboard')
+  //         .then(res => {
+  //             console.log(res.data);
+  //         })
+  //         .catch(err => {
+  //             console.error(err);
+  //         });
+  // }, []);
   return (
-    <div className='container loginContainer' key={scores.id}>
-      {scores.map((user) => (
-        <div key={user.id}>
-          <h3>{user.username}</h3>
-        </div>
-      ))}
+    <div className='container'>
+      <div className="borderContainer">
+        <Result />
+      </div>
     </div>
   )
 }
