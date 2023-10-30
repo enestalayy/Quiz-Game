@@ -1,7 +1,6 @@
-// UserName.jsx
 import React from "react";
 
-function UserName({ username, onUsernameChange }) {
+function UserName({ username, inputChange }) {
   
   return (
     <div>
@@ -11,7 +10,7 @@ function UserName({ username, onUsernameChange }) {
         placeholder="Username"
         required
         value={username}
-        onChange={((e) => onUsernameChange(e.target.value))}
+        onChange={((e) => inputChange(e.target.value))}
       />
     </div>
   );

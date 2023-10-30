@@ -39,5 +39,7 @@ input {
     padding: 5px;
     border-radius: 5px;
 }
-
+button {
+    cursor: pointer;
+}
 

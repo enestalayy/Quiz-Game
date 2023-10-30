@@ -1,29 +1,40 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import NextButton from "../components/Quiz/NextButton";
+import QuizProgress from "../components/QuizProgress";
 import { useSelector } from "react-redux";
-import axios from "axios";
+import { getQuestions } from "../Services/quiz";
+import { handleAsync } from "../utils/handleAsync";
+import { getStep } from "../Services/quizData";
 
 
 function Quiz() {
-  const category = useParams();
+  const id = sessionStorage.getItem('id')
+  const {category} = useParams();
   const currentQuestion = useSelector((state) => state.currentQuestion.value)
-  const userName = useSelector((state) => state.userName.value)
+  const userName = sessionStorage.getItem("username")
   const [questions, setQuestions] = useState([]);
   const [selectedOptionId, setSelectedOptionId] = useState(null)
+  const [selectedQuestion, setSelectedQuestion] = useState(null);
+  const [timer, setTimer] = useState(60);
+
   useEffect(() => {
-    axios.get("http://localhost:3000/quiz?category=" + category)
-      .then((response) => {
-        setQuestions(response.data[category.category]);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+    handleAsync(getQuestions(setQuestions, category))
+    
+
+  }, [category, setSelectedQuestion, setTimer, setSelectedOptionId]);
+  useEffect(() => {
+    ;
+
+    handleAsync(
+      getStep(id, category, questions, setSelectedQuestion, setTimer, setSelectedOptionId)
+    );
   }, [category]);
-console.log(userName)
+  useEffect(() => {
+  }, [selectedOptionId, currentQuestion, questions]);
+  console.log(selectedQuestion)
   return (
     <div className="container">
-        <h3>{userName}</h3>
+        <h3 className="usernameInfo">Username: {userName}</h3>
 
       {questions?.length > 0 ? (
         <div className="questionPage">
@@ -32,7 +43,10 @@ console.log(userName)
               <span>Question {currentQuestion + 1}</span>/{questions.length}
             </div>
             <div className="questionText">
-              {questions[currentQuestion].question}
+              {/* {questions[currentQuestion].question} */}
+              {selectedQuestion
+                ? selectedQuestion.question
+                : "Loading..."}
             </div>
 
           </div>
@@ -46,14 +60,22 @@ console.log(userName)
                   type="radio"
                   name="answer"
                   className="optionInput"
-                  onChange={(() => setSelectedOptionId(options.id))}
+                  checked= {selectedOptionId === options.id}
+                  onChange={((e) => e.target.checked && setSelectedOptionId(options.id))}
                   // style={{ visibility: "hidden" }}
                 /></label>
               </li>
             ))}
           </ul>
           
-          <NextButton questions={questions} category={category} selectedOptionId={selectedOptionId} />
+          <QuizProgress
+            questions={questions}
+            category={category}
+            setQuestions={setQuestions}
+            selectedOptionId={selectedOptionId}
+            setSelectedOptionId={setSelectedOptionId}
+            setTimer={setTimer}
+            />
 
         </div>
       )

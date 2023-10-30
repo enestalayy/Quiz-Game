@@ -1,15 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import PhoneInput, { formatPhoneNumber } from 'react-phone-number-input'
 
-function Phone() {
-    const [phoneNumber, setPhoneNumber] = useState()
+function Phone({ phoneNumber, inputChange }) {
     
   return (
     <PhoneInput
     initialValueFormat="national"
     placeholder="Enter phone number"
     value={phoneNumber}
-    onChange={setPhoneNumber}
+    onChange={((e) => inputChange(e))}
     international
     format={formatPhoneNumber}
     defaultCountry='US'

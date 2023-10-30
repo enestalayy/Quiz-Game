@@ -1,22 +1,19 @@
-import React,{useState, useEffect} from 'react'
-import Result from '../components/Quiz/Result'
-// import axios from 'axios'
+import React from 'react'
+import Result from '../components/Result'
+import { useNavigate } from 'react-router-dom'
 function ScoreBoard() {
-  // const [scores, setScores] = useState([]);
-
-  // useEffect(() => {
-  //     axios.get('http://localhost:3000/scoreboard')
-  //         .then(res => {
-  //             console.log(res.data);
-  //         })
-  //         .catch(err => {
-  //             console.error(err);
-  //         });
-  // }, []);
+  const navigate = useNavigate()
   return (
     <div className='container'>
-      <div className="borderContainer">
-        <Result />
+
+      <Result />
+      <div className="footerScoreboard">
+        <button onClick={() => 
+          navigate('/')
+          
+        }
+        >New Game</button>
+        <button onClick={() => navigate('/categories/')}>Try Another Category</button>
       </div>
     </div>
   )

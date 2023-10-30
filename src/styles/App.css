@@ -17,7 +17,10 @@
             font-size: 70px;
             font-weight: 700;
             font-family: Courgette-Regular;
-            background:linear-gradient(to left, var(--text), var(--border));
+            text-shadow: -1px 1px 5px rgba(255, 0, 255, 0.5);
+            box-shadow: -1px 1px 10px rgba(255, 0, 255, .7);
+            border-radius: 25%;
+            background:linear-gradient(to left, magenta, var(--border));
             background-clip: border-box;
             -webkit-background-clip:text;
             -webkit-text-fill-color:transparent;
@@ -275,9 +278,62 @@
         }
     }
 }
-.scoreboardTable {
-    width: 100%;
+.resultContainer {
+    width: 80vw;
+
+    .scoreboardTable {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        text-transform: capitalize;
+        .scoreboardHead {
+            font-size: 18px;
+        }
+        .scoreboardBody {
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .scoreboardRow {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            border: 1px solid black;
+            .scoreboardRowPart {
+                flex: 1;
+            }
+        }
     
+    }
+}
+.footerScoreboard {
+    width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 30px;
+}
+
+.usernameInfo {
+    font-size: 18px;
+    text-align: left;
+    color: var(--border);
+    text-shadow: -1px 1px 1px white;
 }
 
 
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .labelLogin {
+        font-size: 14px;
+        padding-bottom: 10px;
+        cursor: pointer;
+    }
+    .labelLogin:hover {
+        color: magenta;
+    }
+}
