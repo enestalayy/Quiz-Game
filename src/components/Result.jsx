@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 import { handleAsync } from "../utils/handleAsync";
 import { getCategories, getScores } from "../Services/quiz";
-import { SelectInput } from "./FormFields";
+import SelectInput from "./FormFields/SelectInput";
 
 
 
@@ -14,12 +14,26 @@ const Result = () => {
   const userName = sessionStorage.getItem("username")
   
   useEffect(() => {
-    handleAsync(getScores(category, setScoreboard))
-  }, [category]);
+    const fetchData = async () => {
+      const [categories, categoriesError] = await handleAsync(getCategories());
+      categoriesError && console.error('Kategoriler alınırken hata oluştu', categoriesError);
+      setCategories(categories);
+    };
+
+    fetchData();
+  }, []);
 
   useEffect(() => {
-    handleAsync(getCategories(setCategories));
-  }, []);
+    const fetchData = async () => {
+      const [scores, scoresError] = await handleAsync(getScores(category));
+      scoresError && console.log('Score değerleri alınırken bir sorun oldu', scoresError);
+      setScoreboard(scores);
+    };
+
+    fetchData();
+  }, [category]);
+
+
   
   return (
     <div className="resultContainer">

@@ -26,6 +26,7 @@ const authSlice = createSlice({
     },
     logout: (state) => {
       sessionStorage.clear();
+      sessionStorage.removeItem("id")
       state.isLoggedIn = false;
     },
     
@@ -33,6 +34,6 @@ const authSlice = createSlice({
   },
 });
 
-export const { setUserName, setPassword, login , logout } = authSlice.actions;
+export const { setUserName, setPassword, login , logout, isLoggedIn } = authSlice.actions;
 
 export default authSlice.reducer;

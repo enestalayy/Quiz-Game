@@ -504,19 +504,25 @@
       {
         "id": 1,
         "question": "This is Art!",
+        "type": "checkbox",
         "options": [
           {
             "id": 1,
-            "option": "12",
+            "option": "doğru",
             "isAnswer": true
           },
           {
             "id": 2,
-            "option": "7"
+            "option": "yanlış"
           },
           {
             "id": 3,
-            "option": "0"
+            "option": "doğru",
+            "isAnswer": true
+          },
+          {
+            "id": 4,
+            "option": "yanlış"
           }
         ],
         "selectedOptionId": null,
@@ -649,22 +655,206 @@
       "id": 1,
       "quizData": {
         "math": {
-          "score": 0,
+          "score": 2180,
           "isCompleted": false,
           "step": {
-            "1": null,
+            "1": 1,
             "2": null,
             "3": null,
-            "4": null,
+            "4": 1,
             "5": null,
+            "6": null,
+            "7": null,
+            "8": null
+          }
+        },
+        "geography": {
+          "score": 220,
+          "isCompleted": true,
+          "step": {
+            "1": 1,
+            "2": 2,
+            "3": 2,
+            "4": 1,
+            "5": 1,
+            "6": 2,
+            "7": 1,
+            "8": 3,
+            "9": 1,
+            "10": 3
+          }
+        },
+        "art": {
+          "score": 30,
+          "isCompleted": true,
+          "step": {
+            "1": 1
+          }
+        },
+        "general knowledge": {
+          "score": 30,
+          "isCompleted": true,
+          "step": {
+            "1": 1
+          }
+        },
+        "science": {
+          "score": 30,
+          "isCompleted": true,
+          "step": {
+            "1": 1
+          }
+        },
+        "history": {
+          "score": 30,
+          "isCompleted": true,
+          "step": {
+            "1": 1
+          }
+        },
+        "sport": {
+          "score": 30,
+          "isCompleted": true,
+          "step": {
+            "1": 1
+          }
+        },
+        "entertaintment": {
+          "score": 0,
+          "isCompleted": true,
+          "step": {
+            "1": 2
+          }
+        }
+      }
+    },
+    {
+      "username": "test1",
+      "password": "test12345",
+      "phoneNumber": "",
+      "email": "",
+      "gender": "Male",
+      "quizData": {
+        "math": {
+          "score": 220,
+          "isCompleted": true,
+          "step": {
+            "1": 1,
+            "2": 2,
+            "3": 1,
+            "4": 3,
+            "5": 1,
+            "6": 1,
+            "7": 3,
+            "8": 1,
+            "9": 2,
+            "10": 2
+          }
+        },
+        "science": {
+          "score": 30,
+          "isCompleted": true,
+          "step": {
+            "1": 1
+          }
+        },
+        "geography": {
+          "score": 100,
+          "isCompleted": true,
+          "step": {
+            "1": 1,
+            "2": 2,
+            "3": 1,
+            "4": 2,
+            "5": 3,
             "6": null,
             "7": null,
             "8": null,
             "9": null,
             "10": null
           }
+        },
+        "history": {
+          "score": 30,
+          "isCompleted": true,
+          "step": {
+            "1": 1
+          }
+        },
+        "entertaintment": {
+          "score": 0,
+          "isCompleted": true,
+          "step": {
+            "1": 2
+          }
         }
-      }
+      },
+      "id": 2
+    },
+    {
+      "username": "test2",
+      "password": "123",
+      "phoneNumber": "",
+      "email": "",
+      "gender": "Male",
+      "quizData": {
+        "math": {
+          "score": 140,
+          "isCompleted": true,
+          "step": {
+            "1": 1,
+            "2": 2,
+            "3": 4,
+            "4": 2,
+            "5": 1,
+            "6": 1,
+            "7": null,
+            "8": null,
+            "9": 2,
+            "10": null
+          }
+        },
+        "entertaintment": {
+          "score": 30,
+          "isCompleted": true,
+          "step": {
+            "1": 1
+          }
+        },
+        "geography": {
+          "score": 300,
+          "isCompleted": true,
+          "step": {
+            "1": 1,
+            "2": 2,
+            "3": 1,
+            "4": 1,
+            "5": 3,
+            "6": 3,
+            "7": 1,
+            "8": 1,
+            "9": 1,
+            "10": 1,
+            "time": 55
+          }
+        },
+        "general knowledge": {
+          "score": 30,
+          "isCompleted": true,
+          "step": {
+            "1": 2,
+            "time": 24
+          }
+        },
+        "sport": {
+          "score": 30,
+          "isCompleted": true,
+          "step": {
+            "1": 1
+          }
+        }
+      },
+      "id": 3
     }
   ]
 }

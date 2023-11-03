@@ -9,6 +9,8 @@ const navigate = useNavigate()
 const [categories, setCategories] = useState([])
 const [isCompleted, setIsCompleted] = useState()
 const username = sessionStorage.getItem("username")
+sessionStorage.setItem("previousPage", window.location.pathname);
+
 
   useEffect(() => async () => {
       const [categories, categoriesError] = await handleAsync(getCategories());
@@ -18,10 +20,10 @@ const username = sessionStorage.getItem("username")
       idError && console.error('Kullanıcı kimliği alınırken hata oluştu', idError);
       isCompletedError && console.error('Tamamlanan kategori alınırken hata oluştu', isCompletedError);
       setCategories(categories)
-      sessionStorage.setItem("id", id)
+      id && sessionStorage.setItem("id", id)
       setIsCompleted(isCompleted)
   }, [username]);
-  const isCompletedCategory = (e) => isCompleted.includes(e)
+  const isCompletedCategory = (e) => isCompleted && isCompleted.includes(e)
   return (
     <div className='container categoriesPage'>
         <h3 className='usernameInfo'>Username: {username}</h3>

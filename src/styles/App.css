@@ -212,8 +212,7 @@
             padding: 10px;
             border-radius: 5px;
             background-color: var(--text);
-            opacity: 0.8;
-            color: white;
+            color: magenta;
             text-transform: capitalize;
             font-size: 20px;
             text-shadow: 1px 1px 2px black;
@@ -233,10 +232,28 @@
     .questionSection {
         text-align: center;
         .progressBar {
-            text-align: center;
-            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 100%;
-            background-color: aquamarine;
+            position: relative;
+            height: 30px;
+
+            .progressOverlay {
+                position: absolute;
+                width: 100%;
+                height: 30px;
+                top: 0;
+                left: 0;
+                border-radius: 15px;
+                background:linear-gradient(to left, magenta, var(--border));
+            }
+            .progressText {
+                color: azure;
+                text-shadow: -1px -1px 3px white;
+                position: relative;
+                z-index: 1;
+            }
         }
         .questionText {
             margin: 30px 0;
@@ -261,9 +278,11 @@
                 border-radius: 5px;
                 cursor: pointer;
             }
-            input[type="radio"]:checked + label {
-                color: red;
-              }
+            .selectedLabel {
+                background-color: magenta;
+                color: white;
+                box-shadow: -1px 1px 5px var(--border);
+            }
         }
         
         
@@ -347,4 +366,8 @@
     .labelLogin:hover {
         color: magenta;
     }
+}
+input[type="radio"]:checked + .option {
+    color: red;
+    background-color: red;
 }

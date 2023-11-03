@@ -1,5 +1,5 @@
 import React from 'react'
-import { SelectInput } from '../FormFields'
+import SelectInput from '../FormFields/SelectInput'
 
 function Gender({inputChange, gender}) {
   const options = ['Female', 'Male'];

@@ -5,11 +5,12 @@ import Categories from './Categories'
 import ScoreBoard from './ScoreBoard'
 import Register from '../components/Register'
 import Auth from '../components/Auth'
-
+import { isLoggedIn } from '../Store/authSlice'
+import { useSelector } from 'react-redux'
 
 function Home() {
   const userName = sessionStorage.getItem("username")
-
+  const isLoggedIn = useSelector((state) => state.isLoggedIn)
 
   return (
     <div className='homePage'>
@@ -19,7 +20,7 @@ function Home() {
 
         
         <Routes>
-        {userName ? (
+        {isLoggedIn ? (
           <Route path='/' element={<Categories />} />
         ) : (
           <Route path='/' element={<Register />} />

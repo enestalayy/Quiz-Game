@@ -1,32 +1,27 @@
 import axios from 'axios'
 
-export const updateStep = async (id, category, score, isCategoryCompleted, currentQuestion, selectedOptionId, timer) => {
-    const response = await axios.get(`http://localhost:4000/users/${id}`);
-    const userData = response.data;
-   
+export const updateStep = async (id, category, score, isCategoryCompleted, currentQuestion, selectedOptionId, questions) => {
+  const response = await axios.get(`http://localhost:4000/users/${id}`);
+  const userData = response.data;
   if (!userData.quizData[category]) {
-
-      userData.quizData[category] = {
-        score: score,
-        isCompleted: isCategoryCompleted,
-        step: {
-          1: null,
-          // time: timer,
-        },
+    userData.quizData[category] = {
+      score: score,
+      isCompleted: isCategoryCompleted,
+      step: {
+        1: selectedOptionId,
+      },
       }
-            await axios.put(`http://localhost:4000/users/${id}`, userData);
-
+    await axios.put(`http://localhost:4000/users/${id}`, userData);
   }     else {     
-
-          userData.quizData[category].score = score;
+          userData.quizData[category].score += score;
           userData.quizData[category].isCompleted = isCategoryCompleted;
           userData.quizData[category].step[currentQuestion + 1] = selectedOptionId;
-          // userData.quizData[category].step.time = timer;
+          currentQuestion + 1 !== questions.length && (userData.quizData[category].step[currentQuestion + 2] = null)
+          userData.quizData[category].step.time && delete userData.quizData[category].step.time;
           await axios.patch(`http://localhost:4000/users/${id}`, userData);
-    
-   }   
-      
+   }     
 }
+
 export const isCatCompleted = async (id) => {
   const response = await axios.get(`http://localhost:4000/users/${id}/`)
   const categories = response.data.quizData
@@ -37,27 +32,43 @@ export const isCatCompleted = async (id) => {
   return completedCat
 }
 
+export const updateLastCondition = async (id, category, currentQuestion, selectedOptionId, timer) => {
+  const response = await axios.get(`http://localhost:4000/users/${id}`);
+  const userData = response.data;
+  if (!userData.quizData[category]) {
+    userData.quizData[category] = {
+      score: 0,
+      isCompleted: false,
+      step: {
+        1: selectedOptionId,
+        time: timer,
+      },
+      }
+    await axios.put(`http://localhost:4000/users/${id}`, userData);
+  }else {
+    // userData.quizData[category].step = {
+    //     time: timer,
+    //   }
+    userData.quizData[category].step[currentQuestion + 1] = selectedOptionId;
+    userData.quizData[category].step.time = timer;
+    await axios.patch(`http://localhost:4000/users/${id}`, userData);
+   }     
+}
 
 export const getLastQuestion = async (id, category) => {
   const response = await axios.get(`http://localhost:4000/users/${id}`)
   const userData = response.data;
   const categoryData = userData.quizData[category]
-  var lastQuestion = '';
-
-  if(categoryData) {
-
-    for(var key in categoryData.step) {
-      if (!isNaN (key)) {
-        var questionNumber = parseInt (key)
-        questionNumber > lastQuestion && (lastQuestion = questionNumber)
-      }
+  var lastQuestion = null;
+  if (categoryData && categoryData.step) {
+    const stepKeys = Object.keys(categoryData.step);
+    
+    if (stepKeys.length > 0) {
+      // En büyük değere sahip adımı bul
+      lastQuestion = Math.max(...stepKeys.filter(key => !isNaN(key)));
     }
   }
-  // var remainingTime = categoryData.step.time
-  // const selectedOption = categoryData.step[lastQuestion]
-  const currentQuestion = lastQuestion -1
-  return currentQuestion
-
+  return lastQuestion
 }
 
 export const getLastCondition = async (id, category) => {
@@ -72,9 +83,9 @@ export const getLastCondition = async (id, category) => {
       if (!isNaN (key)) {
         var questionNumber = parseInt (key)
         questionNumber > lastQuestion && (lastQuestion = questionNumber)
-        var selectedOption = categoryData.step[lastQuestion]
       }else if('time' in categoryData.step) {
         var remainingTime = categoryData.step.time
+        var selectedOption = categoryData.step[lastQuestion]
       }
     }
 

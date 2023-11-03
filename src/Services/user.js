@@ -21,7 +21,7 @@ export const registerUser = async(username, password, phoneNumber, email, gender
             phoneNumber: phoneNumber,
             email: email,
             gender: gender,
-            scores: {}
+            quizData: {}
         })
     return (response.data)
 }
