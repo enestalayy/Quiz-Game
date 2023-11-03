@@ -647,27 +647,21 @@
       "email": "enestalayy@gmail.com",
       "gender": "0",
       "id": 1,
-      "scores": {},
       "quizData": {
         "math": {
+          "score": 0,
           "isCompleted": false,
           "step": {
             "1": null,
-            "2": 2,
-            "3": 2,
-            "time": 56
-          }
-        },
-        "geography": {
-          "isCompleted": false,
-          "step": {
-            "1": 1,
-            "2": 2,
+            "2": null,
             "3": null,
-            "5": 1,
+            "4": null,
+            "5": null,
             "6": null,
-            "currentQuestion": 1,
-            "time": 60
+            "7": null,
+            "8": null,
+            "9": null,
+            "10": null
           }
         }
       }

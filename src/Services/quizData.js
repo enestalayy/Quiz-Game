@@ -1,51 +1,85 @@
 import axios from 'axios'
-export const updateStep = async (id, category,isCategoryCompleted, currentQuestion, selectedOptionId, timer) => {
-    const response = await axios.get(`http://localhost:3000/users/${id}`);
+
+export const updateStep = async (id, category, score, isCategoryCompleted, currentQuestion, selectedOptionId, timer) => {
+    const response = await axios.get(`http://localhost:4000/users/${id}`);
     const userData = response.data;
+   
+  if (!userData.quizData[category]) {
 
-    if (!userData.quizData[category]) {
-        userData.quizData[category] = {
-          isCompleted: isCategoryCompleted,
-          step: {
-            currentQuestion: currentQuestion + 1,
-            time: timer,
-          },
-        };
-      } else {
-        userData.quizData[category].isCompleted = isCategoryCompleted;
-        userData.quizData[category].step[currentQuestion + 1] = selectedOptionId;
-        userData.quizData[category].step.time = timer;
+      userData.quizData[category] = {
+        score: score,
+        isCompleted: isCategoryCompleted,
+        step: {
+          1: null,
+          // time: timer,
+        },
       }
-      await axios.patch(`http://localhost:3000/users/${id}`, userData);
-      return true;
-}
-export const getStep = async (id, category, questions, setSelectedQuestion, setTimer, setSelectedOptionId) => {
-  const response = await axios.get(`http://localhost:3000/users/${id}`)
-  const userData = response.data;
+            await axios.put(`http://localhost:4000/users/${id}`, userData);
 
-  if (userData.quizData[category]) {
-    const categoryData = userData.quizData[category];
+  }     else {     
+
+          userData.quizData[category].score = score;
+          userData.quizData[category].isCompleted = isCategoryCompleted;
+          userData.quizData[category].step[currentQuestion + 1] = selectedOptionId;
+          // userData.quizData[category].step.time = timer;
+          await axios.patch(`http://localhost:4000/users/${id}`, userData);
     
-    if (categoryData.isCompleted) {
-      // Kullanıcı bu kategoriyi tamamlamışsa, baştan başlatın veya isteğinize göre işlem yapın.
-    } else {
-      // Kullanıcı bu kategoriyi daha önce başlatmışsa, kaldığı yerden devam etmelisiniz.
-      const currentQuestion = categoryData.step.currentQuestion || 0;
-      const timer = categoryData.step.time || 60;
-      const selectedOptionId = categoryData.step[currentQuestion + 1]?.selectedOptionId || null; // Seçilen seçenek
-      console.log(currentQuestion)
-      console.log(timer)
-      console.log(categoryData.step[currentQuestion + 1]?.selectedOptionId)
-      // Şimdi bu bilgilere göre ilgili soruyu ve süreyi getirin
-      const questionsForCategory = questions; // Bu, soruların tam listesi olmalı
-  
-      if (currentQuestion >= 0 && currentQuestion < questionsForCategory.length) {
-        const selectedQuestion = questionsForCategory[currentQuestion];
-        setSelectedQuestion(selectedQuestion);
-        setTimer(timer);
-        setSelectedOptionId(selectedOptionId);
+   }   
+      
+}
+export const isCatCompleted = async (id) => {
+  const response = await axios.get(`http://localhost:4000/users/${id}/`)
+  const categories = response.data.quizData
+  const completedCat = []
+  for(let category in categories) {
+    categories[category].isCompleted && completedCat.push(category)
+  }
+  return completedCat
+}
+
+
+export const getLastQuestion = async (id, category) => {
+  const response = await axios.get(`http://localhost:4000/users/${id}`)
+  const userData = response.data;
+  const categoryData = userData.quizData[category]
+  var lastQuestion = '';
+
+  if(categoryData) {
+
+    for(var key in categoryData.step) {
+      if (!isNaN (key)) {
+        var questionNumber = parseInt (key)
+        questionNumber > lastQuestion && (lastQuestion = questionNumber)
       }
     }
-  } 
-  
+  }
+  // var remainingTime = categoryData.step.time
+  // const selectedOption = categoryData.step[lastQuestion]
+  const currentQuestion = lastQuestion -1
+  return currentQuestion
+
+}
+
+export const getLastCondition = async (id, category) => {
+  const response = await axios.get(`http://localhost:4000/users/${id}`)
+  const userData = response.data;
+  const categoryData = userData.quizData[category]
+  var lastQuestion = '';
+
+  if(categoryData) {
+
+    for(var key in categoryData.step) {
+      if (!isNaN (key)) {
+        var questionNumber = parseInt (key)
+        questionNumber > lastQuestion && (lastQuestion = questionNumber)
+        var selectedOption = categoryData.step[lastQuestion]
+      }else if('time' in categoryData.step) {
+        var remainingTime = categoryData.step.time
+      }
+    }
+
+  }
+
+  return {remainingTime, selectedOption}
+
 }

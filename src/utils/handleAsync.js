@@ -3,7 +3,7 @@ export const handleAsync = async promise => {
       const result = await promise
       return [result, null]
     } catch (error) {
-      return [null, error]
+      return [null, console.log(error)]
     }
   }
    

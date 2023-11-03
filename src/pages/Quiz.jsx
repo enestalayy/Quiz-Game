@@ -4,34 +4,35 @@ import QuizProgress from "../components/QuizProgress";
 import { useSelector } from "react-redux";
 import { getQuestions } from "../Services/quiz";
 import { handleAsync } from "../utils/handleAsync";
-import { getStep } from "../Services/quizData";
+import { getLastQuestion, getStep } from "../Services/quizData";
 
 
 function Quiz() {
   const id = sessionStorage.getItem('id')
   const {category} = useParams();
-  const currentQuestion = useSelector((state) => state.currentQuestion.value)
   const userName = sessionStorage.getItem("username")
   const [questions, setQuestions] = useState([]);
-  const [selectedOptionId, setSelectedOptionId] = useState(null)
-  const [selectedQuestion, setSelectedQuestion] = useState(null);
-  const [timer, setTimer] = useState(60);
+  const [currentQuestion, setCurrentQuestion] = useState(0)
+  // const [remainingTime, setRemainingTime] = useState()
+  useEffect(() => async() => {
+    const[questions, questsError] = await handleAsync(getQuestions(category))
+    const[quizData, quizDataError] = await handleAsync(getLastQuestion(id, category));
 
-  useEffect(() => {
-    handleAsync(getQuestions(setQuestions, category))
-    
+    questsError && console.log(questsError)
+    quizDataError && console.log(quizDataError)
+    setQuestions(questions)
+    if (quizData.currentQuestion !== null && quizData.currentQuestion !== undefined) {
+      setCurrentQuestion(quizData.currentQuestion);
+    }
 
-  }, [category, setSelectedQuestion, setTimer, setSelectedOptionId]);
-  useEffect(() => {
-    ;
+    // quizData.currentQuestion && setCurrentQuestion(quizData.currentQuestion)
+    // setRemainingTime(quizData.remainingTime)
+    // setSelectedOptionId(quizData.selectedOption)
+  }, []);
 
-    handleAsync(
-      getStep(id, category, questions, setSelectedQuestion, setTimer, setSelectedOptionId)
-    );
-  }, [category]);
-  useEffect(() => {
-  }, [selectedOptionId, currentQuestion, questions]);
-  console.log(selectedQuestion)
+
+
+
   return (
     <div className="container">
         <h3 className="usernameInfo">Username: {userName}</h3>
@@ -43,15 +44,14 @@ function Quiz() {
               <span>Question {currentQuestion + 1}</span>/{questions.length}
             </div>
             <div className="questionText">
-              {/* {questions[currentQuestion].question} */}
-              {selectedQuestion
-                ? selectedQuestion.question
-                : "Loading..."}
+              {
+              questions[currentQuestion].question}
+
             </div>
 
           </div>
           
-          <ul className="optionSection">
+          {/* <ul className="optionSection">
             {questions[currentQuestion].options.map((options) => (
               <li key={options.id} className="options">
                 <label className="option" htmlFor="">
@@ -66,15 +66,16 @@ function Quiz() {
                 /></label>
               </li>
             ))}
-          </ul>
+          </ul> */}
           
           <QuizProgress
             questions={questions}
             category={category}
             setQuestions={setQuestions}
-            selectedOptionId={selectedOptionId}
-            setSelectedOptionId={setSelectedOptionId}
-            setTimer={setTimer}
+
+            // remainingTime={remainingTime}
+            currentQuestion={currentQuestion}
+            setCurrentQuestion={setCurrentQuestion}
             />
 
         </div>
