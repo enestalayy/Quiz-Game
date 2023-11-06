@@ -4,10 +4,15 @@
       {
         "id": 1,
         "question": "3 x 4 = ?",
+        "type": "select",
         "options": [
           {
+            "id": 0,
+            "option": "Seçiniz"
+          },
+          {
             "id": 1,
-            "option": "12",
+            "option": "doğru",
             "isAnswer": true
           },
           {
@@ -16,19 +21,19 @@
           },
           {
             "id": 3,
-            "option": "0"
+            "option": "zort"
           },
           {
             "id": 4,
             "option": "50"
           }
         ],
-        "selectedOptionId": null,
         "point": 30
       },
       {
         "id": 2,
         "question": "5 + 5 = ?",
+        "type": "checkbox",
         "options": [
           {
             "id": 1,
@@ -36,7 +41,7 @@
           },
           {
             "id": 2,
-            "option": "10",
+            "option": "doğru",
             "isAnswer": true
           },
           {
@@ -45,15 +50,16 @@
           },
           {
             "id": 4,
-            "option": "50"
+            "option": "doğru",
+            "isAnswer": true
           }
         ],
-        "selectedOptionId": null,
         "point": 30
       },
       {
         "id": 3,
         "question": "10 x 10 = ?",
+        "type": "radio",
         "options": [
           {
             "id": 1,
@@ -73,12 +79,12 @@
             "option": "50"
           }
         ],
-        "selectedOptionId": null,
         "point": 40
       },
       {
         "id": 4,
         "question": "10 x 10 = ?",
+        "type": "radio",
         "options": [
           {
             "id": 1,
@@ -98,12 +104,12 @@
             "option": "50"
           }
         ],
-        "selectedOptionId": null,
         "point": 40
       },
       {
         "id": 5,
         "question": "10 x 10 = ?",
+        "type": "radio",
         "options": [
           {
             "id": 1,
@@ -123,12 +129,12 @@
             "option": "50"
           }
         ],
-        "selectedOptionId": null,
         "point": 40
       },
       {
         "id": 6,
         "question": "10 x 10 = ?",
+        "type": "radio",
         "options": [
           {
             "id": 1,
@@ -148,12 +154,12 @@
             "option": "50"
           }
         ],
-        "selectedOptionId": null,
         "point": 40
       },
       {
         "id": 7,
         "question": "10 x 10 = ?",
+        "type": "radio",
         "options": [
           {
             "id": 1,
@@ -173,12 +179,12 @@
             "option": "50"
           }
         ],
-        "selectedOptionId": null,
         "point": 40
       },
       {
         "id": 8,
         "question": "10 x 10 = ?",
+        "type": "radio",
         "options": [
           {
             "id": 1,
@@ -198,12 +204,12 @@
             "option": "50"
           }
         ],
-        "selectedOptionId": null,
         "point": 40
       },
       {
         "id": 9,
         "question": "10 x 10 = ?",
+        "type": "radio",
         "options": [
           {
             "id": 1,
@@ -223,12 +229,12 @@
             "option": "50"
           }
         ],
-        "selectedOptionId": null,
         "point": 40
       },
       {
         "id": 10,
         "question": "10 x 10 = ?",
+        "type": "radio",
         "options": [
           {
             "id": 1,
@@ -248,7 +254,6 @@
             "option": "50"
           }
         ],
-        "selectedOptionId": null,
         "point": 40
       }
     ],
@@ -271,7 +276,6 @@
             "option": "0"
           }
         ],
-        "selectedOptionId": null,
         "point": 30
       },
       {
@@ -296,7 +300,6 @@
             "option": "50"
           }
         ],
-        "selectedOptionId": null,
         "point": 30
       },
       {
@@ -321,7 +324,6 @@
             "option": "50"
           }
         ],
-        "selectedOptionId": null,
         "point": 40
       },
       {
@@ -346,7 +348,6 @@
             "option": "50"
           }
         ],
-        "selectedOptionId": null,
         "point": 40
       },
       {
@@ -371,7 +372,6 @@
             "option": "50"
           }
         ],
-        "selectedOptionId": null,
         "point": 40
       },
       {
@@ -396,7 +396,6 @@
             "option": "50"
           }
         ],
-        "selectedOptionId": null,
         "point": 40
       },
       {
@@ -421,7 +420,6 @@
             "option": "50"
           }
         ],
-        "selectedOptionId": null,
         "point": 40
       },
       {
@@ -446,7 +444,6 @@
             "option": "50"
           }
         ],
-        "selectedOptionId": null,
         "point": 40
       },
       {
@@ -471,7 +468,6 @@
             "option": "50"
           }
         ],
-        "selectedOptionId": null,
         "point": 40
       },
       {
@@ -496,7 +492,6 @@
             "option": "50"
           }
         ],
-        "selectedOptionId": null,
         "point": 40
       }
     ],
@@ -525,7 +520,6 @@
             "option": "yanlış"
           }
         ],
-        "selectedOptionId": null,
         "point": 30
       }
     ],
@@ -548,7 +542,6 @@
             "option": "0"
           }
         ],
-        "selectedOptionId": null,
         "point": 30
       }
     ],
@@ -571,7 +564,6 @@
             "option": "0"
           }
         ],
-        "selectedOptionId": null,
         "point": 30
       }
     ],
@@ -594,7 +586,6 @@
             "option": "0"
           }
         ],
-        "selectedOptionId": null,
         "point": 30
       }
     ],
@@ -617,7 +608,6 @@
             "option": "0"
           }
         ],
-        "selectedOptionId": null,
         "point": 30
       }
     ],
@@ -640,7 +630,6 @@
             "option": "0"
           }
         ],
-        "selectedOptionId": null,
         "point": 30
       }
     ]
@@ -655,17 +644,22 @@
       "id": 1,
       "quizData": {
         "math": {
-          "score": 2180,
-          "isCompleted": false,
+          "score": 260,
+          "isCompleted": true,
           "step": {
             "1": 1,
-            "2": null,
-            "3": null,
+            "2": [
+              2,
+              4
+            ],
+            "3": 1,
             "4": 1,
-            "5": null,
-            "6": null,
-            "7": null,
-            "8": null
+            "5": [],
+            "6": [],
+            "7": 2,
+            "8": 1,
+            "9": 1,
+            "10": 1
           }
         },
         "geography": {
@@ -855,6 +849,105 @@
         }
       },
       "id": 3
+    },
+    {
+      "username": "asd123",
+      "password": "asd123",
+      "phoneNumber": "",
+      "email": "",
+      "gender": "",
+      "quizData": {
+        "math": {
+          "score": 180,
+          "isCompleted": true,
+          "step": {
+            "1": "1",
+            "2": [
+              2,
+              4
+            ],
+            "3": 1,
+            "4": 1,
+            "5": 3,
+            "6": 1,
+            "7": [
+              2,
+              4
+            ],
+            "8": [
+              2,
+              4
+            ],
+            "9": [
+              2,
+              4
+            ],
+            "10": [
+              2,
+              4
+            ]
+          }
+        },
+        "geography": {
+          "score": 0,
+          "isCompleted": false,
+          "step": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "time": 27
+          }
+        },
+        "art": {
+          "score": 0,
+          "isCompleted": true,
+          "step": {
+            "1": [
+              1
+            ]
+          }
+        }
+      },
+      "id": 4
+    },
+    {
+      "username": "zez123",
+      "password": "zez123",
+      "phoneNumber": "",
+      "email": "",
+      "gender": "",
+      "quizData": {
+        "math": {
+          "score": 220,
+          "isCompleted": true,
+          "step": {
+            "1": "1",
+            "2": [
+              2,
+              4
+            ],
+            "3": 1,
+            "4": 1,
+            "5": 1,
+            "6": 1,
+            "7": 2,
+            "8": [
+              2,
+              4
+            ],
+            "9": [
+              2,
+              4
+            ],
+            "10": [
+              2,
+              4
+            ]
+          }
+        }
+      },
+      "id": 5
     }
   ]
 }

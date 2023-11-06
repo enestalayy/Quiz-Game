@@ -1,9 +1,9 @@
 import React from 'react'
 
 function SelectInput (props) {
-    const { id, name, options, onChange, value } = props;
+    const { id, name, options, onChange, value, className } = props;
     return (
-        <select id={id} name={name} onChange={onChange} value={value}>
+        <select id={id} name={name} className={className} onChange={onChange} value={value}>
             {options.map((option) => (
                 <option key={option} value={option}>
                 {option}

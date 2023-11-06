@@ -24,6 +24,8 @@ sessionStorage.setItem("previousPage", window.location.pathname);
       setIsCompleted(isCompleted)
   }, [username]);
   const isCompletedCategory = (e) => isCompleted && isCompleted.includes(e)
+
+  
   return (
     <div className='container categoriesPage'>
         <h3 className='usernameInfo'>Username: {username}</h3>

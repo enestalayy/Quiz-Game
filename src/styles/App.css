@@ -250,7 +250,6 @@
             }
             .progressText {
                 color: azure;
-                text-shadow: -1px -1px 3px white;
                 position: relative;
                 z-index: 1;
             }
@@ -283,6 +282,9 @@
                 color: white;
                 box-shadow: -1px 1px 5px var(--border);
             }
+            .optionInput {
+                display: none;
+            }
         }
         
         
@@ -299,7 +301,7 @@
             border-radius: 100%;
         }
         .nextQuestionBtn {
-            font-family: Domine-SemiBold;
+            font-family: Domine-SemiBoldDomine-SemiBold;
             font-size: 16px;
             cursor: pointer;
             padding: 5px;
@@ -310,39 +312,115 @@
 }
 .resultContainer {
     width: 80vw;
+    text-align: center;
 
+    .labelCat {
+        .selectCat {
+            text-transform: capitalize;
+            width: fit-content;
+            font-size: calc(10px + 0.5vw);
+            border-radius: 5px;
+            background-color: transparent;
+            text-align: center;
+            cursor: pointer;
+        }
+        .selectCat + option{
+            background-color: transparent;
+        }
+    }
     .scoreboardTable {
         width: 100%;
         display: flex;
         flex-direction: column;
-        text-align: center;
-        text-transform: capitalize;
+        border-radius: 5px;
+        border-collapse: collapse;
+        scrollbar-color: aqua;
+        scrollbar-arrow-color: aqua;
+        scrollbar-base-color: aqua;
+        max-height: 80vh;
         .scoreboardHead {
-            font-size: 18px;
+            background-color: transparent;
+            font-size: calc(12px + 0.5vw);
         }
         .scoreboardBody {
             display: flex;
             flex-direction: column;
-            
+            font-size: calc(10px + 0.5vw);
+            overflow-y: auto;
+
+        }
+        .scoreboardRowHead {
+            display: flex;
+            flex-direction: row;
+            border-radius: 5px;
+            .scoreboardHeadPart {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 4;
+            }
+            .scoreboardHeadRank {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 1;
+            }
         }
         .scoreboardRow {
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
-            border: 1px solid black;
+            border-radius: 5px;
+            padding: 2px;
             .scoreboardRowPart {
-                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 4;
             }
+            
+            .scoreboardRank {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 1;
+
+            }
+
         }
-    
+
+        
+        .scoreboardRow:nth-child(even) {
+            text-shadow: -1px 1px 1px beige;
+            background-color: transparent;
+        }
+        
+        .scoreboardRow:nth-child(odd) {
+
+            color: beige;
+            text-shadow: -1px 1px 1px black;
+            background-color: rgb(255, 136, 217);
+        }
     }
 }
 .footerScoreboard {
     width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    .footerButton {
+        font-family: Domine-SemiBold;
+        font-size: 18px;
+        color: beige;
+        padding: 5px;
+        border: none;
+        background-color: rgba(255, 136, 217, 0.8);
+        border-radius: 5px;
+    }
+    .footerButton:hover {
+        color: var(--text);
+        box-shadow: -1px 1px 3px var(--text);
+    }
 }
 
 .usernameInfo {
@@ -366,8 +444,4 @@
     .labelLogin:hover {
         color: magenta;
     }
-}
-input[type="radio"]:checked + .option {
-    color: red;
-    background-color: red;
 }

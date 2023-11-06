@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export const updateStep = async (id, category, score, isCategoryCompleted, currentQuestion, selectedOptionId, questions) => {
+export const updateStep = async (id, category, score, isCategoryCompleted, currentQuestion, selectedOptionId, questions, selectedOptionIds) => {
   const response = await axios.get(`http://localhost:4000/users/${id}`);
   const userData = response.data;
   if (!userData.quizData[category]) {
@@ -8,14 +8,14 @@ export const updateStep = async (id, category, score, isCategoryCompleted, curre
       score: score,
       isCompleted: isCategoryCompleted,
       step: {
-        1: selectedOptionId,
+        1: selectedOptionId || selectedOptionIds,
       },
       }
     await axios.put(`http://localhost:4000/users/${id}`, userData);
   }     else {     
           userData.quizData[category].score += score;
           userData.quizData[category].isCompleted = isCategoryCompleted;
-          userData.quizData[category].step[currentQuestion + 1] = selectedOptionId;
+          userData.quizData[category].step[currentQuestion + 1] = selectedOptionId || selectedOptionIds;
           currentQuestion + 1 !== questions.length && (userData.quizData[category].step[currentQuestion + 2] = null)
           userData.quizData[category].step.time && delete userData.quizData[category].step.time;
           await axios.patch(`http://localhost:4000/users/${id}`, userData);
@@ -32,7 +32,7 @@ export const isCatCompleted = async (id) => {
   return completedCat
 }
 
-export const updateLastCondition = async (id, category, currentQuestion, selectedOptionId, timer) => {
+export const updateLastCondition = async (id, category, currentQuestion, selectedOptionId, timer, selectedOptionIds) => {
   const response = await axios.get(`http://localhost:4000/users/${id}`);
   const userData = response.data;
   if (!userData.quizData[category]) {
@@ -40,7 +40,7 @@ export const updateLastCondition = async (id, category, currentQuestion, selecte
       score: 0,
       isCompleted: false,
       step: {
-        1: selectedOptionId,
+        1: selectedOptionId || selectedOptionIds,
         time: timer,
       },
       }
@@ -49,7 +49,7 @@ export const updateLastCondition = async (id, category, currentQuestion, selecte
     // userData.quizData[category].step = {
     //     time: timer,
     //   }
-    userData.quizData[category].step[currentQuestion + 1] = selectedOptionId;
+    userData.quizData[category].step[currentQuestion + 1] = selectedOptionId || selectedOptionIds;
     userData.quizData[category].step.time = timer;
     await axios.patch(`http://localhost:4000/users/${id}`, userData);
    }     
@@ -64,7 +64,6 @@ export const getLastQuestion = async (id, category) => {
     const stepKeys = Object.keys(categoryData.step);
     
     if (stepKeys.length > 0) {
-      // En büyük değere sahip adımı bul
       lastQuestion = Math.max(...stepKeys.filter(key => !isNaN(key)));
     }
   }

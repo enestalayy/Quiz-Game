@@ -6,7 +6,7 @@ function RadioInput(props) {
   return (
     <input
         id= {id}
-        type= {type}
+        type= "radio"
         name= {name}
         className= {className}
         checked= {checked}

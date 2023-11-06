@@ -24,12 +24,12 @@ function ScoreBoard() {
 
       <Result />
       <div className="footerScoreboard">
-        <button onClick={() => {
+        <button className='footerButton' onClick={() => {
           dispatch(logout())
           navigate('/')}
         }
         >Log out</button>
-        <button onClick={() => navigate('/categories/')}>Try Another Category</button>
+        <button className='footerButton' onClick={() => navigate('/categories/')}>Try Another Category</button>
       </div>
     </div>
   )

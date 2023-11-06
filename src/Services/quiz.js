@@ -15,9 +15,7 @@ export const getId = async ( userName) => {
     return response.data[0].id
 }
 
-export const getTypes = async () => {
-    const response = await axios.get('http://localhost:4000/quiz')
-}
+
 
 export const getScores = async (category) => {
     const response = await axios.get(`http://localhost:4000/users`)
