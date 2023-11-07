@@ -1,11 +1,8 @@
 import React, {useEffect} from 'react'
 import Result from '../components/Result'
 import { useNavigate } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
-import { logout } from '../Store/authSlice'
-
+import LogoutButton from '../components/LogoutButton'
 function ScoreBoard() {
-  const dispatch = useDispatch()
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -24,11 +21,7 @@ function ScoreBoard() {
 
       <Result />
       <div className="footerScoreboard">
-        <button className='footerButton' onClick={() => {
-          dispatch(logout())
-          navigate('/')}
-        }
-        >Log out</button>
+        <LogoutButton className='footerButton' />
         <button className='footerButton' onClick={() => navigate('/categories/')}>Try Another Category</button>
       </div>
     </div>

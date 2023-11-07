@@ -1,6 +1,6 @@
 import React from "react";
 
-function UserName({ username, inputChange }) {
+function UserName({ username, inputChange, onBlur, onFocus }) {
   
   return (
     <div>
@@ -11,6 +11,8 @@ function UserName({ username, inputChange }) {
         required
         value={username}
         onChange={((e) => inputChange(e.target.value))}
+        onBlur={onBlur}
+        onFocus={onFocus}
       />
     </div>
   );

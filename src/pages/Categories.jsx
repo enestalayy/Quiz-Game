@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import { handleAsync } from "../utils/handleAsync";
 import { getCategories, getId } from "../Services/quiz.js";
 import { isCatCompleted } from '../Services/quizData.js';
+import LogoutButton from '../components/LogoutButton.jsx';
+import {CgMoveRight} from 'react-icons/cg'
 
 function Categories() {
 const navigate = useNavigate()
@@ -22,7 +24,7 @@ sessionStorage.setItem("previousPage", window.location.pathname);
       setCategories(categories)
       id && sessionStorage.setItem("id", id)
       setIsCompleted(isCompleted)
-  }, [username]);
+  }, []);
   const isCompletedCategory = (e) => isCompleted && isCompleted.includes(e)
 
   
@@ -39,6 +41,10 @@ sessionStorage.setItem("previousPage", window.location.pathname);
                   
                   
             )}
+        </div>
+        <div className="footerCat">
+        <LogoutButton />
+        <button className='button' onClick={() => navigate('/scoreboard')}>View Scoreboard <CgMoveRight /></button>
         </div>
     </div>
   )

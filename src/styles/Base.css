@@ -21,6 +21,8 @@ h1 h2 h3 h4 h5 h6 {
     margin: 0;
     padding: 0;
     font-family: Domine-Regular;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 
@@ -41,5 +43,18 @@ input {
 }
 button {
     cursor: pointer;
+}
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    padding: 5px;
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.button:hover {
+    box-shadow: 0 0 5px magenta;
 }
 
