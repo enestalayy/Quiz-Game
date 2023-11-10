@@ -2,7 +2,7 @@ import React from 'react'
 import SelectInput from '../FormFields/SelectInput'
 
 function Gender({inputChange, gender}) {
-  const options = ['Female', 'Male'];
+  const options = ['Select', 'Female', 'Male'];
   return (
     <SelectInput
       id="gender"

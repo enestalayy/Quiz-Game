@@ -3,258 +3,257 @@
     "math": [
       {
         "id": 1,
-        "question": "3 x 4 = ?",
-        "type": "select",
+        "question": "What is the smallest positive integer that is divisible by all the numbers from 1 to 20?",
+        "type": "radio",
         "options": [
           {
-            "id": 0,
-            "option": "Seçiniz"
-          },
-          {
             "id": 1,
-            "option": "doğru",
+            "option": "232,792,560",
             "isAnswer": true
           },
           {
             "id": 2,
-            "option": "7"
+            "option": "252,000,000"
           },
           {
             "id": 3,
-            "option": "zort"
+            "option": "360,360,000"
           },
           {
             "id": 4,
-            "option": "50"
+            "option": "720,720,000"
           }
         ],
-        "point": 30
+        "point": 10
       },
       {
         "id": 2,
-        "question": "5 + 5 = ?",
+        "question": "What is the name of the curve that is traced by a point on the rim of a circle rolling along a straight line?",
+        "type": "radio",
+        "options": [
+          {
+            "id": 1,
+            "option": "Epicycloid"
+          },
+          {
+            "id": 2,
+            "option": "Cycloid",
+            "isAnswer": true
+          },
+          {
+            "id": 3,
+            "option": "Hypocycloid"
+          },
+          {
+            "id": 4,
+            "option": "Trochoid"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 3,
+        "question": "What is the value of (1+2+3+...+100) / (2+3+...+99)?",
+        "type": "radio",
+        "options": [
+          {
+            "id": 1,
+            "option": "50"
+          },
+          {
+            "id": 2,
+            "option": "10.2"
+          },
+          {
+            "id": 3,
+            "option": "0.12"
+          },
+          {
+            "id": 4,
+            "option": "1.02",
+            "isAnswer": true
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 4,
+        "question": "What is the smallest positive integer that is a multiple of both 102 and 100?",
+        "type": "radio",
+        "options": [
+          {
+            "id": 1,
+            "option": "10200"
+          },
+          {
+            "id": 2,
+            "option": "5100",
+            "isAnswer": true
+          },
+          {
+            "id": 3,
+            "option": "2500"
+          },
+          {
+            "id": 4,
+            "option": "15300"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 5,
+        "question": "What is the value of (10! - 8!) ?",
+        "type": "radio",
+        "options": [
+          {
+            "id": 1,
+            "option": "89",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "90"
+          },
+          {
+            "id": 3,
+            "option": "99"
+          },
+          {
+            "id": 4,
+            "option": "100"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 6,
+        "question": "What is the value of (1 x 2 x 3 x ... x 10) / ((1 + 2 + 3 ... + 9) x 2)",
+        "type": "radio",
+        "options": [
+          {
+            "id": 1,
+            "option": "7!"
+          },
+          {
+            "id": 2,
+            "option": "7! x 2"
+          },
+          {
+            "id": 3,
+            "option": "8!",
+            "isAnswer": true
+          },
+          {
+            "id": 4,
+            "option": "8! x 2"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 7,
+        "question": "What values can have x, y and z ? (3x) - (2y) + z = 10 and (2x) + y - (3z) = -6 (Can be multiple choice)",
         "type": "checkbox",
         "options": [
           {
             "id": 1,
-            "option": "25"
-          },
-          {
-            "id": 2,
-            "option": "doğru",
-            "isAnswer": true
-          },
-          {
-            "id": 3,
-            "option": "124"
-          },
-          {
-            "id": 4,
-            "option": "doğru",
-            "isAnswer": true
-          }
-        ],
-        "point": 30
-      },
-      {
-        "id": 3,
-        "question": "10 x 10 = ?",
-        "type": "radio",
-        "options": [
-          {
-            "id": 1,
-            "option": "100",
+            "option": "x = 1, y = 2, z = 3",
             "isAnswer": true
           },
           {
             "id": 2,
-            "option": "20"
+            "option": "x = 0, y = 3, z = -2"
           },
           {
             "id": 3,
-            "option": "10"
+            "option": "x = 2, y = -1, z = 3"
           },
           {
             "id": 4,
-            "option": "50"
-          }
-        ],
-        "point": 40
-      },
-      {
-        "id": 4,
-        "question": "10 x 10 = ?",
-        "type": "radio",
-        "options": [
-          {
-            "id": 1,
-            "option": "100",
+            "option": "x = -1, y = 2, z = -3",
             "isAnswer": true
-          },
-          {
-            "id": 2,
-            "option": "20"
-          },
-          {
-            "id": 3,
-            "option": "10"
-          },
-          {
-            "id": 4,
-            "option": "50"
           }
         ],
-        "point": 40
-      },
-      {
-        "id": 5,
-        "question": "10 x 10 = ?",
-        "type": "radio",
-        "options": [
-          {
-            "id": 1,
-            "option": "100",
-            "isAnswer": true
-          },
-          {
-            "id": 2,
-            "option": "20"
-          },
-          {
-            "id": 3,
-            "option": "10"
-          },
-          {
-            "id": 4,
-            "option": "50"
-          }
-        ],
-        "point": 40
-      },
-      {
-        "id": 6,
-        "question": "10 x 10 = ?",
-        "type": "radio",
-        "options": [
-          {
-            "id": 1,
-            "option": "100",
-            "isAnswer": true
-          },
-          {
-            "id": 2,
-            "option": "20"
-          },
-          {
-            "id": 3,
-            "option": "10"
-          },
-          {
-            "id": 4,
-            "option": "50"
-          }
-        ],
-        "point": 40
-      },
-      {
-        "id": 7,
-        "question": "10 x 10 = ?",
-        "type": "radio",
-        "options": [
-          {
-            "id": 1,
-            "option": "100",
-            "isAnswer": true
-          },
-          {
-            "id": 2,
-            "option": "20"
-          },
-          {
-            "id": 3,
-            "option": "10"
-          },
-          {
-            "id": 4,
-            "option": "50"
-          }
-        ],
-        "point": 40
+        "point": 10
       },
       {
         "id": 8,
-        "question": "10 x 10 = ?",
-        "type": "radio",
+        "question": "What values can have x, y and z ? (2x) + (3y) = 8 and (4x) - (6y) = 6 (Can be multiple choice)",
+        "type": "checkbox",
         "options": [
           {
             "id": 1,
-            "option": "100",
+            "option": "x = 2, y = 1",
             "isAnswer": true
           },
           {
             "id": 2,
-            "option": "20"
+            "option": "x = -1, y = 2",
+            "isAnswer": true
           },
           {
             "id": 3,
-            "option": "10"
+            "option": "x = 3, y = 1",
+            "isAnswer": true
           },
           {
             "id": 4,
-            "option": "50"
+            "option": "x = 0, y = 2"
           }
         ],
-        "point": 40
+        "point": 10
       },
       {
         "id": 9,
-        "question": "10 x 10 = ?",
-        "type": "radio",
+        "question": "Which of the following numbers are prime numbers(Can be multiple choice)?",
+        "type": "checkbox",
         "options": [
           {
             "id": 1,
-            "option": "100",
-            "isAnswer": true
+            "option": "129"
           },
           {
             "id": 2,
-            "option": "20"
+            "option": "139",
+            "isAnswer": true
           },
           {
             "id": 3,
-            "option": "10"
+            "option": "149",
+            "isAnswer": true
           },
           {
             "id": 4,
-            "option": "50"
+            "option": "159"
           }
         ],
-        "point": 40
+        "point": 10
       },
       {
         "id": 10,
-        "question": "10 x 10 = ?",
-        "type": "radio",
+        "question": "We represent a set as A = {1, 2, 3, 4, 5}. According to this, how many subsets does the set A have?",
+        "type": "select",
         "options": [
           {
             "id": 1,
-            "option": "100",
-            "isAnswer": true
+            "option": "16"
           },
           {
             "id": 2,
-            "option": "20"
+            "option": "25"
           },
           {
             "id": 3,
-            "option": "10"
+            "option": "32",
+            "isAnswer": true
           },
           {
             "id": 4,
-            "option": "50"
+            "option": "64"
           }
         ],
-        "point": 40
+        "point": 10
       }
     ],
     "geography": [
@@ -912,68 +911,110 @@
       "id": 4
     },
     {
-      "username": "zez123",
-      "password": "zez123",
+      "username": "zort",
+      "password": "zort1234%",
+      "phoneNumber": "",
+      "email": "",
+      "gender": "",
+      "quizData": {},
+      "id": 5
+    },
+    {
+      "username": "zortingen",
+      "password": "zortingen5%",
+      "phoneNumber": "",
+      "email": "",
+      "gender": "",
+      "quizData": {
+        "science": {
+          "score": 0,
+          "isCompleted": false,
+          "step": {
+            "1": [],
+            "time": 55
+          }
+        },
+        "art": {
+          "score": 0,
+          "isCompleted": false,
+          "step": {
+            "1": [],
+            "time": 53
+          }
+        },
+        "math": {
+          "score": 30,
+          "isCompleted": false,
+          "step": {
+            "1": 1,
+            "2": [],
+            "time": 60
+          }
+        },
+        "geography": {
+          "score": 0,
+          "isCompleted": false,
+          "step": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "time": 60
+          }
+        }
+      },
+      "id": 6
+    },
+    {
+      "username": "port",
+      "password": "port1785%",
       "phoneNumber": "",
       "email": "",
       "gender": "",
       "quizData": {
         "math": {
-          "score": 220,
-          "isCompleted": true,
+          "score": 60,
+          "isCompleted": false,
           "step": {
-            "1": "1",
-            "2": [
-              2,
-              4
-            ],
-            "3": 1,
-            "4": 1,
-            "5": 1,
-            "6": 1,
-            "7": 2,
-            "8": [
-              2,
-              4
-            ],
-            "9": [
-              2,
-              4
-            ],
-            "10": [
-              2,
-              4
-            ]
+            "1": 1,
+            "2": null
           }
         }
       },
-      "id": 5
-    },
-    {
-      "username": "Naktios",
-      "password": "naktios1234",
-      "phoneNumber": "",
-      "email": "",
-      "gender": "",
-      "quizData": {},
-      "id": 6
-    },
-    {
-      "username": "asdas",
-      "password": "asdas123",
-      "phoneNumber": "",
-      "email": "",
-      "gender": "",
-      "quizData": {},
       "id": 7
     },
     {
-      "username": "ass",
-      "password": "ass123",
+      "username": "poly",
+      "password": "poly1234%",
       "phoneNumber": "",
       "email": "",
       "gender": "",
-      "quizData": {},
+      "quizData": {
+        "math": {
+          "score": 0,
+          "isCompleted": false,
+          "step": {
+            "1": 2,
+            "2": 4,
+            "3": [],
+            "4": null
+          }
+        },
+        "geography": {
+          "score": 0,
+          "isCompleted": false,
+          "step": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "time": 24
+          }
+        }
+      },
       "id": 8
     }
   ]

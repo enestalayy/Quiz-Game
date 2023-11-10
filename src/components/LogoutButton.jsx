@@ -4,11 +4,11 @@ import { useNavigate } from 'react-router-dom'
 import {BiLogOut} from 'react-icons/bi'
 import { useDispatch } from 'react-redux'
 
-function LogoutButton() {
+function LogoutButton({className}) {
     const navigate = useNavigate()
     const dispatch = useDispatch()
   return (
-    <button  className='button' onClick={() => {
+    <button  className={className} onClick={() => {
         dispatch(logout())
         navigate('/')}
       }

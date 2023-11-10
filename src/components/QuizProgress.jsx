@@ -14,23 +14,29 @@ const QuizProgress = ({questions, currentQuestion, setCurrentQuestion} ) => {
   const [selectedOptionId, setSelectedOptionId] = useState(null)
   const [selectedOptionIds, setSelectedOptionIds] = useState([])
   const type = questions[currentQuestion].type
-  
   useEffect(() => async() => {
     const[lastCondition, lastConditionError] = await handleAsync(getLastCondition(id, category));
     lastConditionError && console.log(lastConditionError)
     if(lastCondition){
-    if (lastCondition.remainingTime === null || lastCondition.remainingTime === undefined) {
+      const lastTime = lastCondition.remainingTime
+    if (lastTime === null || lastTime === undefined) {
       setTimer(60);
     } else {
-      setTimer(lastCondition.remainingTime);
+      setTimer(lastTime);
     }
-    if (lastCondition.selectedOption !== null || lastCondition.selectedOption !== undefined) {
-      typeof lastCondition.selectedOption === "number" && setSelectedOptionId(lastCondition.selectedOption)
-      typeof lastCondition.selectedOption === "string" && setSelectedOptionId(parseInt(lastCondition.selectedOption))
-      typeof lastCondition.selectedOption === "object" && setSelectedOptionIds(lastCondition.selectedOption)
+    const lastOption = lastCondition.selectedOption
+    if (lastOption !== null || lastOption !== undefined) {
+      typeof lastOption === "number" && setSelectedOptionId(lastOption)
+      typeof lastOption === "string" && setSelectedOptionId(parseInt(lastOption))
+      typeof lastOption === "object" && setSelectedOptionIds(lastOption)
     }
   }
-  }, []);
+  document.addEventListener('keydown', handleKeyDown, true)
+  return () => {
+    document.removeEventListener('keydown', handleKeyDown, true);
+  };  
+}, []);
+
   useEffect(() => {
     let newScore = 0;
   
@@ -55,7 +61,7 @@ const QuizProgress = ({questions, currentQuestion, setCurrentQuestion} ) => {
   
     setScore(newScore);
   }, [selectedOptionId, selectedOptionIds]);
-  
+  console.log(score)
   const handleNextStep = async () => {
     try {
       await updateStep(id, category, score, isCategoryCompleted, currentQuestion, selectedOptionId, questions, selectedOptionIds);
@@ -69,13 +75,68 @@ const QuizProgress = ({questions, currentQuestion, setCurrentQuestion} ) => {
       setCurrentQuestion(currentQuestion + 1)
       setTimer(60);
       setSelectedOptionId(null)
+      setSelectedOptionIds([])
+      document.activeElement && document.activeElement.blur()
     }
   }
-  
+  const handleKeyDown = (e) => {
+    e.preventDefault()
+    if (e.key==='Enter') {
+      document.activeElement.click();
+    }
+     else if (e.key === 'ArrowRight' || e.key==='ArrowLeft') {
+      const buttons = Array.from(document.getElementsByTagName('button'));
+      let currentIndex = buttons.findIndex((element) => element === document.activeElement);
+      console.log(buttons)
+      console.log(currentIndex)
+      if (currentIndex === -1) {
+        buttons[0].focus();
+        currentIndex = 0;
+      }
+       else {
+        if (e.key === 'ArrowRight') {
+          currentIndex = (currentIndex + 1) % buttons.length;
+        } else if (e.key === 'ArrowLeft') {
+          currentIndex = (currentIndex - 1 + buttons.length) % buttons.length;
+        }
+        buttons[currentIndex].focus();
+      }
+    }
+    else if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        const select = document.querySelector('select.optionInput');
+        if(select && select !== null) {
+          const options = Array.from(select.options)
+          const currentInput = select.options.selectedIndex
+        
+        console.log(select.options.selectedIndex)
+        let newIndex;
+        if(e.key === 'ArrowDown'){
+          newIndex = (currentInput + 1) % options.length
+          
+        } else if(e.key === 'ArrowUp') {
+          newIndex = (currentInput - 1 + options.length) % options.length
+        }
+        setSelectedOptionId(newIndex)
+      }else {
+        const inputs = document.getElementsByTagName('input')
+        const options = Array.from(inputs)
+        let currentInput = options && options.findIndex((element) => element === document.activeElement);
+        if(currentInput === -1){
+          currentInput = e.key === 'ArrowDown' ? 0 : options.length - 1;
+          options[currentInput] && options[currentInput].focus();
+        } else if(e.key==='ArrowDown'){
+          currentInput = (currentInput + 1) % options.length;
+        }else if (e.key === 'ArrowUp') {
+          currentInput = (currentInput - 1 + options.length) % options.length;
+        }
+        options[currentInput] && options[currentInput].focus()
+      }
+    }
+  };
   useEffect(() => {
     (currentQuestion + 1 === questions.length ) && setIsCategoryCompleted(true)
     const interval = setInterval(async () => {
-      setTimer((prevTimer) => prevTimer - 1);
+      setTimer((prevTimer) => prevTimer - 1 );
       if (timer === 1) {
         await handleNextStep()
     }}, 1000);
@@ -107,7 +168,19 @@ const QuizProgress = ({questions, currentQuestion, setCurrentQuestion} ) => {
             
             <li key={options.id} className="options">
               
-              (<label className={`option ${selectedOptionId === options.id ? 'selectedLabel' : 'option'}`} htmlFor={options.id}>
+              <label
+                className={`${
+                  type === 'radio'
+                    ? selectedOptionId === options.id
+                      ? 'selectedLabel'
+                      : 'option'
+                    : type === 'checkbox'
+                    ? selectedOptionIds.includes(options.id)
+                      ? 'selectedLabel'
+                      : 'option'
+                    : ''
+                }`}
+                htmlFor={options.id}>
                 {options.option}
                 
               </label> 
@@ -129,7 +202,21 @@ const QuizProgress = ({questions, currentQuestion, setCurrentQuestion} ) => {
                     setSelectedOptionId(e.target.checked ? options.id : null);
                   }
                 }}
-              />)
+                onFocus={() => {
+                  const labelElement = document.querySelector(`label[for="${options.id}"]`);
+                  if (labelElement) {
+                    labelElement.style.border = '2px solid magenta';
+                  }else labelElement.style.border = 'none';
+                }}
+                onBlur={() => {
+                  document.querySelector(':focus') && document.querySelector(':focus').blur()
+                  const labelElement = document.querySelector(`label[for="${options.id}"]`);
+                  if (selectedOptionId !== options.id) {
+                    labelElement.style.border = 'none';
+                  }
+                }}
+
+              />
             </li>
           ))}
       </ul>

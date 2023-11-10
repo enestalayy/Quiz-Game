@@ -21,21 +21,23 @@ h1 h2 h3 h4 h5 h6 {
     margin: 0;
     padding: 0;
     font-family: Domine-Regular;
-    overflow-x: hidden;
-    overflow-y: auto;
+    list-style: none;
 }
-
+*:focus {
+    box-shadow: 0px 0px 10px magenta;
+}
 
 
 section {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-color: bisque;
 }
 .container {
     margin: 5vh auto;
     padding: 10px;
-    width: 80vw;
+    width: 82vw;
+    margin-bottom: 0;
 }
 input {
     padding: 5px;

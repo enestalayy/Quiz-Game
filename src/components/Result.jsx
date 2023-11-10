@@ -5,7 +5,7 @@ import { getCategories, getScores } from "../Services/quiz";
 import SelectInput from "./FormFields/SelectInput";
 import {BsSortAlphaDownAlt, BsSortAlphaDown, BsSortDownAlt, BsSortDown} from 'react-icons/bs'
 
-const Result = () => {
+const Result = ({handleKeyDown}) => {
   const [categories, setCategories] = useState([])
   const { category: defaultCategory } = useParams();
   const [category, setCategory] = useState(defaultCategory);
@@ -21,7 +21,7 @@ const Result = () => {
     };
     fetchData();
   }, []);
-
+  
   useEffect(() => {
     const fetchData = async () => {
       const [scores, scoresError] = await handleAsync(getScores(category));
@@ -55,7 +55,7 @@ const Result = () => {
     });
     return sorted;
   };
-  
+
   return (
     <div className="resultContainer">
       
@@ -80,14 +80,14 @@ const Result = () => {
               Rank
             </th>
             <th className="scoreboardHeadPart">
-              Username
-              <button onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}>
+              <button className="sortButton" onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}>
+                Username
                 {sortOrder === 'asc' ? <BsSortAlphaDown /> : <BsSortAlphaDownAlt />}
               </button>
             </th>
             <th className="scoreboardHeadPart">
-              Point
-              <button onClick={() => setSortOrder(sortOrder === 'toLess' ? 'toMore' : 'toLess')}>
+              <button className="sortButton" onClick={() => setSortOrder(sortOrder === 'toLess' ? 'toMore' : 'toLess')}>
+                Point
                 {sortOrder === 'toLess' ? <BsSortDown /> : <BsSortDownAlt />}
               </button>
             </th>
