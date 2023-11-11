@@ -15,7 +15,10 @@ server.use(
  })
 );
 server.use(router);
-
+// Listen to port
+server.listen(4000, () => {
+ console.log("JSON Server is running");
+});
 
 // Export the Server API
-module.exports = (req, res) => { server(req, res); };
+module.exports = server;
