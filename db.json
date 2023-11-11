@@ -259,377 +259,1794 @@
     "geography": [
       {
         "id": 1,
-        "question": "This is Geography!",
+        "type": "radio",
+        "question": "What is the name of the longest river in the world?",
         "options": [
           {
             "id": 1,
-            "option": "12",
-            "isAnswer": true
+            "option": "Amazon"
           },
           {
             "id": 2,
-            "option": "7"
+            "option": "Yangtze"
           },
           {
             "id": 3,
-            "option": "0"
+            "option": "Mississippi"
+          },
+          {
+            "id": 4,
+            "option": "Nile",
+            "isAnswer": true
           }
         ],
-        "point": 30
+        "point": 10
       },
       {
         "id": 2,
-        "question": "5 + 5 = ?",
+        "type": "radio",
+        "question": "Which of these continents is the smallest in terms of land area?",
         "options": [
           {
             "id": 1,
-            "option": "25"
+            "option": "Europe"
           },
           {
             "id": 2,
-            "option": "10",
+            "option": "Australia",
             "isAnswer": true
           },
           {
             "id": 3,
-            "option": "124"
+            "option": "Antarctica"
           },
           {
             "id": 4,
-            "option": "50"
+            "option": "South America"
           }
         ],
-        "point": 30
+        "point": 10
       },
       {
         "id": 3,
-        "question": "10 x 10 = ?",
+        "type": "radio",
+        "question": "Which of these oceans is the largest by surface area?",
         "options": [
           {
             "id": 1,
-            "option": "100",
-            "isAnswer": true
+            "option": "Atlantic"
           },
           {
             "id": 2,
-            "option": "20"
+            "option": "Pacific",
+            "isAnswer": true
           },
           {
             "id": 3,
-            "option": "10"
+            "option": "Indian"
           },
           {
             "id": 4,
-            "option": "50"
+            "option": "Arctic"
           }
         ],
-        "point": 40
+        "point": 10
       },
       {
         "id": 4,
-        "question": "10 x 10 = ?",
+        "type": "radio",
+        "question": "Which of these islands is the largest in the world?",
         "options": [
           {
             "id": 1,
-            "option": "100",
+            "option": "Greenland",
             "isAnswer": true
           },
           {
             "id": 2,
-            "option": "20"
+            "option": "Madagascar"
           },
           {
             "id": 3,
-            "option": "10"
+            "option": "Borneo"
           },
           {
             "id": 4,
-            "option": "50"
+            "option": "New Guinea"
           }
         ],
-        "point": 40
+        "point": 10
       },
       {
         "id": 5,
-        "question": "10 x 10 = ?",
+        "type": "radio",
+        "question": "How many meters is Everest, the highest mountain in the world?",
         "options": [
           {
             "id": 1,
-            "option": "100",
+            "option": "8.849",
             "isAnswer": true
           },
           {
             "id": 2,
-            "option": "20"
+            "option": "8.859"
           },
           {
             "id": 3,
-            "option": "10"
+            "option": "8.869"
           },
           {
             "id": 4,
-            "option": "50"
+            "option": "8.869"
           }
         ],
-        "point": 40
+        "point": 10
       },
       {
         "id": 6,
-        "question": "10 x 10 = ?",
+        "type": "radio",
+        "question": "Which of these cities is the most southerly in the world?",
         "options": [
           {
             "id": 1,
-            "option": "100",
+            "option": "Ushuaia",
             "isAnswer": true
           },
           {
             "id": 2,
-            "option": "20"
+            "option": "Cape Town"
           },
           {
             "id": 3,
-            "option": "10"
+            "option": "Christchurch"
           },
           {
             "id": 4,
-            "option": "50"
+            "option": "Punta Arenas"
           }
         ],
-        "point": 40
+        "point": 10
       },
       {
         "id": 7,
-        "question": "10 x 10 = ?",
+        "type": "checkbox",
+        "question": "Which of these countries are located in both Europe and Asia?",
         "options": [
           {
             "id": 1,
-            "option": "100",
+            "option": "Kazakhstan",
             "isAnswer": true
           },
           {
             "id": 2,
-            "option": "20"
+            "option": "Ukraine"
           },
           {
             "id": 3,
-            "option": "10"
+            "option": "Turkey",
+            "isAnswer": true
           },
           {
             "id": 4,
-            "option": "50"
+            "option": "Belarus"
           }
         ],
-        "point": 40
+        "point": 10
       },
       {
         "id": 8,
-        "question": "10 x 10 = ?",
+        "type": "checkbox",
+        "question": "Which of these countries have a monarchy as their form of government?",
         "options": [
           {
             "id": 1,
-            "option": "100",
+            "option": "Sweden",
             "isAnswer": true
           },
           {
             "id": 2,
-            "option": "20"
+            "option": "Lithuania"
           },
           {
             "id": 3,
-            "option": "10"
+            "option": "France"
           },
           {
             "id": 4,
-            "option": "50"
+            "option": "Japan",
+            "isAnswer": true
           }
         ],
-        "point": 40
+        "point": 10
       },
       {
         "id": 9,
-        "question": "10 x 10 = ?",
+        "type": "checkbox",
+        "question": "Which of these countries have a coastline on the Mediterranean Sea?",
         "options": [
           {
             "id": 1,
-            "option": "100",
+            "option": "Egypt",
             "isAnswer": true
           },
           {
             "id": 2,
-            "option": "20"
+            "option": "Portugal"
           },
           {
             "id": 3,
-            "option": "10"
+            "option": "Turkey",
+            "isAnswer": true
           },
           {
             "id": 4,
-            "option": "50"
+            "option": "Morocco",
+            "isAnswer": true
           }
         ],
-        "point": 40
+        "point": 10
       },
       {
         "id": 10,
-        "question": "10 x 10 = ?",
+        "type": "select",
+        "question": "Which of these countries are members of the European Union?",
         "options": [
           {
             "id": 1,
-            "option": "100",
-            "isAnswer": true
+            "option": "Turkey"
           },
           {
             "id": 2,
-            "option": "20"
+            "option": "Norway"
           },
           {
             "id": 3,
-            "option": "10"
+            "option": "Croatia",
+            "isAnswer": true
           },
           {
             "id": 4,
-            "option": "50"
+            "option": "Switzerland"
           }
         ],
-        "point": 40
+        "point": 10
       }
     ],
     "art": [
       {
         "id": 1,
-        "question": "This is Art!",
-        "type": "checkbox",
+        "type": "radio",
+        "question": "What is the name of the technique that uses small dots of different colors to create an image?",
         "options": [
           {
             "id": 1,
-            "option": "doğru",
+            "option": "Expressionism"
+          },
+          {
+            "id": 2,
+            "option": "Impressionism"
+          },
+          {
+            "id": 3,
+            "option": "Cubism"
+          },
+          {
+            "id": 4,
+            "option": "Pointillism",
+            "isAnswer": true
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 2,
+        "type": "radio",
+        "question": "What is the term for a type of art that does not represent any recognizable subject or object?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Surreal"
+          },
+          {
+            "id": 2,
+            "option": "Abstract",
+            "isAnswer": true
+          },
+          {
+            "id": 3,
+            "option": "Minimalist"
+          },
+          {
+            "id": 4,
+            "option": "Pop"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 3,
+        "type": "radio",
+        "question": "Who painted the famous mural of “The Last Supper” in the 15th century?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Leonardo da Vinci",
             "isAnswer": true
           },
           {
             "id": 2,
-            "option": "yanlış"
+            "option": "Michelangelo "
           },
           {
             "id": 3,
-            "option": "doğru",
+            "option": "Raphael "
+          },
+          {
+            "id": 4,
+            "option": "Botticelli "
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 4,
+        "type": "radio",
+        "question": "What is the name of the style of painting that uses tiny brushstrokes of pure colors to capture the effects of light?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Impressionism",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "Expressionism"
+          },
+          {
+            "id": 3,
+            "option": "Realism"
+          },
+          {
+            "id": 4,
+            "option": "Romanticism"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 5,
+        "type": "radio",
+        "question": "What is the name of the movement that emerged in the 1950s and 1960s that used images and symbols from popular culture such as comics, advertisements, and celebrities?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Dadaism "
+          },
+          {
+            "id": 2,
+            "option": "Surrealism "
+          },
+          {
+            "id": 3,
+            "option": "Futurism "
+          },
+          {
+            "id": 4,
+            "option": "Pop Art",
+            "isAnswer": true
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 6,
+        "type": "radio",
+        "question": "What is the name of the ancient Greek sculpture that depicts a young man throwing a discus?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Hermes "
+          },
+          {
+            "id": 2,
+            "option": "Apollo "
+          },
+          {
+            "id": 3,
+            "option": "Discobolus ",
             "isAnswer": true
           },
           {
             "id": 4,
-            "option": "yanlış"
+            "option": "Perseus "
           }
         ],
-        "point": 30
+        "point": 10
+      },
+      {
+        "id": 7,
+        "type": "checkbox",
+        "question": "Which of the following are types of sculptures?(You can choose more than one answer)",
+        "options": [
+          {
+            "id": 1,
+            "option": "Relief",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "Collage"
+          },
+          {
+            "id": 3,
+            "option": "Bust",
+            "isAnswer": true
+          },
+          {
+            "id": 4,
+            "option": "Statue",
+            "isAnswer": true
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 8,
+        "type": "checkbox",
+        "question": "Which of the following are famous paintings by Pablo Picasso? (You can choose more than one answer)",
+        "options": [
+          {
+            "id": 1,
+            "option": "Guernica ",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "The Persistence of Memory"
+          },
+          {
+            "id": 3,
+            "option": "The Starry Night"
+          },
+          {
+            "id": 4,
+            "option": "Les Demoiselles d’Avignon",
+            "isAnswer": true
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 9,
+        "type": "checkbox",
+        "question": "Which of the following are forms of poetry?(You can choose more than one answer)",
+        "options": [
+          {
+            "id": 1,
+            "option": "Sonnet ",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "Haiku ",
+            "isAnswer": true
+          },
+          {
+            "id": 3,
+            "option": "Limerick ",
+            "isAnswer": true
+          },
+          {
+            "id": 4,
+            "option": "Novel "
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Which of the following composers died in the same year as Ludwig Van Beethoven, 1827?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Franz Schubert",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "Wolfgang Mozart"
+          },
+          {
+            "id": 3,
+            "option": "Johann Bach"
+          },
+          {
+            "id": 4,
+            "option": "George Handel"
+          }
+        ],
+        "point": 10
       }
     ],
     "general knowledge": [
       {
         "id": 1,
-        "question": "This is General Knowledge!",
+        "type": "radio",
+        "question": "What is the name of the longest river in the world?",
         "options": [
           {
             "id": 1,
-            "option": "12",
+            "option": "Amazon"
+          },
+          {
+            "id": 2,
+            "option": "Yangtze"
+          },
+          {
+            "id": 3,
+            "option": "Mississippi"
+          },
+          {
+            "id": 4,
+            "option": "Nile",
+            "isAnswer": true
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 2,
+        "type": "radio",
+        "question": "Which of these continents is the smallest in terms of land area?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Europe"
+          },
+          {
+            "id": 2,
+            "option": "Australia",
+            "isAnswer": true
+          },
+          {
+            "id": 3,
+            "option": "Antarctica"
+          },
+          {
+            "id": 4,
+            "option": "South America"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 3,
+        "type": "radio",
+        "question": "Which of these oceans is the largest by surface area?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Atlantic"
+          },
+          {
+            "id": 2,
+            "option": "Pacific",
+            "isAnswer": true
+          },
+          {
+            "id": 3,
+            "option": "Indian"
+          },
+          {
+            "id": 4,
+            "option": "Arctic"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 4,
+        "type": "radio",
+        "question": "Which of these islands is the largest in the world?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Greenland",
             "isAnswer": true
           },
           {
             "id": 2,
-            "option": "7"
+            "option": "Madagascar"
           },
           {
             "id": 3,
-            "option": "0"
+            "option": "Borneo"
+          },
+          {
+            "id": 4,
+            "option": "New Guinea"
           }
         ],
-        "point": 30
+        "point": 10
+      },
+      {
+        "id": 5,
+        "type": "radio",
+        "question": "How many meters is Everest, the highest mountain in the world?",
+        "options": [
+          {
+            "id": 1,
+            "option": "8.849",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "8.859"
+          },
+          {
+            "id": 3,
+            "option": "8.869"
+          },
+          {
+            "id": 4,
+            "option": "8.869"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 6,
+        "type": "radio",
+        "question": "Which of these cities is the most southerly in the world?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Ushuaia",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "Cape Town"
+          },
+          {
+            "id": 3,
+            "option": "Christchurch"
+          },
+          {
+            "id": 4,
+            "option": "Punta Arenas"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 7,
+        "type": "checkbox",
+        "question": "Which of these countries are located in both Europe and Asia?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Kazakhstan",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "Ukraine"
+          },
+          {
+            "id": 3,
+            "option": "Turkey",
+            "isAnswer": true
+          },
+          {
+            "id": 4,
+            "option": "Belarus"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 8,
+        "type": "checkbox",
+        "question": "Which of these countries have a monarchy as their form of government?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Sweden",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "Lithuania"
+          },
+          {
+            "id": 3,
+            "option": "France"
+          },
+          {
+            "id": 4,
+            "option": "Japan",
+            "isAnswer": true
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 9,
+        "type": "checkbox",
+        "question": "Which of these countries have a coastline on the Mediterranean Sea?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Egypt",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "Portugal"
+          },
+          {
+            "id": 3,
+            "option": "Turkey",
+            "isAnswer": true
+          },
+          {
+            "id": 4,
+            "option": "Morocco",
+            "isAnswer": true
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Which of these countries are members of the European Union?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Turkey"
+          },
+          {
+            "id": 2,
+            "option": "Norway"
+          },
+          {
+            "id": 3,
+            "option": "Croatia",
+            "isAnswer": true
+          },
+          {
+            "id": 4,
+            "option": "Switzerland"
+          }
+        ],
+        "point": 10
       }
     ],
     "science": [
       {
         "id": 1,
-        "question": "This is Science!",
+        "type": "radio",
+        "question": "What is the name of the longest river in the world?",
         "options": [
           {
             "id": 1,
-            "option": "12",
+            "option": "Amazon"
+          },
+          {
+            "id": 2,
+            "option": "Yangtze"
+          },
+          {
+            "id": 3,
+            "option": "Mississippi"
+          },
+          {
+            "id": 4,
+            "option": "Nile",
+            "isAnswer": true
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 2,
+        "type": "radio",
+        "question": "Which of these continents is the smallest in terms of land area?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Europe"
+          },
+          {
+            "id": 2,
+            "option": "Australia",
+            "isAnswer": true
+          },
+          {
+            "id": 3,
+            "option": "Antarctica"
+          },
+          {
+            "id": 4,
+            "option": "South America"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 3,
+        "type": "radio",
+        "question": "Which of these oceans is the largest by surface area?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Atlantic"
+          },
+          {
+            "id": 2,
+            "option": "Pacific",
+            "isAnswer": true
+          },
+          {
+            "id": 3,
+            "option": "Indian"
+          },
+          {
+            "id": 4,
+            "option": "Arctic"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 4,
+        "type": "radio",
+        "question": "Which of these islands is the largest in the world?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Greenland",
             "isAnswer": true
           },
           {
             "id": 2,
-            "option": "7"
+            "option": "Madagascar"
           },
           {
             "id": 3,
-            "option": "0"
+            "option": "Borneo"
+          },
+          {
+            "id": 4,
+            "option": "New Guinea"
           }
         ],
-        "point": 30
+        "point": 10
+      },
+      {
+        "id": 5,
+        "type": "radio",
+        "question": "How many meters is Everest, the highest mountain in the world?",
+        "options": [
+          {
+            "id": 1,
+            "option": "8.849",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "8.859"
+          },
+          {
+            "id": 3,
+            "option": "8.869"
+          },
+          {
+            "id": 4,
+            "option": "8.869"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 6,
+        "type": "radio",
+        "question": "Which of these cities is the most southerly in the world?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Ushuaia",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "Cape Town"
+          },
+          {
+            "id": 3,
+            "option": "Christchurch"
+          },
+          {
+            "id": 4,
+            "option": "Punta Arenas"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 7,
+        "type": "checkbox",
+        "question": "Which of these countries are located in both Europe and Asia?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Kazakhstan",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "Ukraine"
+          },
+          {
+            "id": 3,
+            "option": "Turkey",
+            "isAnswer": true
+          },
+          {
+            "id": 4,
+            "option": "Belarus"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 8,
+        "type": "checkbox",
+        "question": "Which of these countries have a monarchy as their form of government?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Sweden",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "Lithuania"
+          },
+          {
+            "id": 3,
+            "option": "France"
+          },
+          {
+            "id": 4,
+            "option": "Japan",
+            "isAnswer": true
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 9,
+        "type": "checkbox",
+        "question": "Which of these countries have a coastline on the Mediterranean Sea?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Egypt",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "Portugal"
+          },
+          {
+            "id": 3,
+            "option": "Turkey",
+            "isAnswer": true
+          },
+          {
+            "id": 4,
+            "option": "Morocco",
+            "isAnswer": true
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Which of these countries are members of the European Union?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Turkey"
+          },
+          {
+            "id": 2,
+            "option": "Norway"
+          },
+          {
+            "id": 3,
+            "option": "Croatia",
+            "isAnswer": true
+          },
+          {
+            "id": 4,
+            "option": "Switzerland"
+          }
+        ],
+        "point": 10
       }
     ],
     "history": [
       {
         "id": 1,
-        "question": "This is History!",
+        "type": "radio",
+        "question": "What is the name of the longest river in the world?",
         "options": [
           {
             "id": 1,
-            "option": "12",
+            "option": "Amazon"
+          },
+          {
+            "id": 2,
+            "option": "Yangtze"
+          },
+          {
+            "id": 3,
+            "option": "Mississippi"
+          },
+          {
+            "id": 4,
+            "option": "Nile",
+            "isAnswer": true
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 2,
+        "type": "radio",
+        "question": "Which of these continents is the smallest in terms of land area?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Europe"
+          },
+          {
+            "id": 2,
+            "option": "Australia",
+            "isAnswer": true
+          },
+          {
+            "id": 3,
+            "option": "Antarctica"
+          },
+          {
+            "id": 4,
+            "option": "South America"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 3,
+        "type": "radio",
+        "question": "Which of these oceans is the largest by surface area?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Atlantic"
+          },
+          {
+            "id": 2,
+            "option": "Pacific",
+            "isAnswer": true
+          },
+          {
+            "id": 3,
+            "option": "Indian"
+          },
+          {
+            "id": 4,
+            "option": "Arctic"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 4,
+        "type": "radio",
+        "question": "Which of these islands is the largest in the world?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Greenland",
             "isAnswer": true
           },
           {
             "id": 2,
-            "option": "7"
+            "option": "Madagascar"
           },
           {
             "id": 3,
-            "option": "0"
+            "option": "Borneo"
+          },
+          {
+            "id": 4,
+            "option": "New Guinea"
           }
         ],
-        "point": 30
+        "point": 10
+      },
+      {
+        "id": 5,
+        "type": "radio",
+        "question": "How many meters is Everest, the highest mountain in the world?",
+        "options": [
+          {
+            "id": 1,
+            "option": "8.849",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "8.859"
+          },
+          {
+            "id": 3,
+            "option": "8.869"
+          },
+          {
+            "id": 4,
+            "option": "8.869"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 6,
+        "type": "radio",
+        "question": "Which of these cities is the most southerly in the world?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Ushuaia",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "Cape Town"
+          },
+          {
+            "id": 3,
+            "option": "Christchurch"
+          },
+          {
+            "id": 4,
+            "option": "Punta Arenas"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 7,
+        "type": "checkbox",
+        "question": "Which of these countries are located in both Europe and Asia?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Kazakhstan",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "Ukraine"
+          },
+          {
+            "id": 3,
+            "option": "Turkey",
+            "isAnswer": true
+          },
+          {
+            "id": 4,
+            "option": "Belarus"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 8,
+        "type": "checkbox",
+        "question": "Which of these countries have a monarchy as their form of government?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Sweden",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "Lithuania"
+          },
+          {
+            "id": 3,
+            "option": "France"
+          },
+          {
+            "id": 4,
+            "option": "Japan",
+            "isAnswer": true
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 9,
+        "type": "checkbox",
+        "question": "Which of these countries have a coastline on the Mediterranean Sea?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Egypt",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "Portugal"
+          },
+          {
+            "id": 3,
+            "option": "Turkey",
+            "isAnswer": true
+          },
+          {
+            "id": 4,
+            "option": "Morocco",
+            "isAnswer": true
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Which of these countries are members of the European Union?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Turkey"
+          },
+          {
+            "id": 2,
+            "option": "Norway"
+          },
+          {
+            "id": 3,
+            "option": "Croatia",
+            "isAnswer": true
+          },
+          {
+            "id": 4,
+            "option": "Switzerland"
+          }
+        ],
+        "point": 10
       }
     ],
     "sport": [
       {
         "id": 1,
-        "question": "This is Sport!",
+        "type": "radio",
+        "question": "What is the name of the longest river in the world?",
         "options": [
           {
             "id": 1,
-            "option": "12",
+            "option": "Amazon"
+          },
+          {
+            "id": 2,
+            "option": "Yangtze"
+          },
+          {
+            "id": 3,
+            "option": "Mississippi"
+          },
+          {
+            "id": 4,
+            "option": "Nile",
+            "isAnswer": true
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 2,
+        "type": "radio",
+        "question": "Which of these continents is the smallest in terms of land area?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Europe"
+          },
+          {
+            "id": 2,
+            "option": "Australia",
+            "isAnswer": true
+          },
+          {
+            "id": 3,
+            "option": "Antarctica"
+          },
+          {
+            "id": 4,
+            "option": "South America"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 3,
+        "type": "radio",
+        "question": "Which of these oceans is the largest by surface area?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Atlantic"
+          },
+          {
+            "id": 2,
+            "option": "Pacific",
+            "isAnswer": true
+          },
+          {
+            "id": 3,
+            "option": "Indian"
+          },
+          {
+            "id": 4,
+            "option": "Arctic"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 4,
+        "type": "radio",
+        "question": "Which of these islands is the largest in the world?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Greenland",
             "isAnswer": true
           },
           {
             "id": 2,
-            "option": "7"
+            "option": "Madagascar"
           },
           {
             "id": 3,
-            "option": "0"
+            "option": "Borneo"
+          },
+          {
+            "id": 4,
+            "option": "New Guinea"
           }
         ],
-        "point": 30
+        "point": 10
+      },
+      {
+        "id": 5,
+        "type": "radio",
+        "question": "How many meters is Everest, the highest mountain in the world?",
+        "options": [
+          {
+            "id": 1,
+            "option": "8.849",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "8.859"
+          },
+          {
+            "id": 3,
+            "option": "8.869"
+          },
+          {
+            "id": 4,
+            "option": "8.869"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 6,
+        "type": "radio",
+        "question": "Which of these cities is the most southerly in the world?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Ushuaia",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "Cape Town"
+          },
+          {
+            "id": 3,
+            "option": "Christchurch"
+          },
+          {
+            "id": 4,
+            "option": "Punta Arenas"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 7,
+        "type": "checkbox",
+        "question": "Which of these countries are located in both Europe and Asia?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Kazakhstan",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "Ukraine"
+          },
+          {
+            "id": 3,
+            "option": "Turkey",
+            "isAnswer": true
+          },
+          {
+            "id": 4,
+            "option": "Belarus"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 8,
+        "type": "checkbox",
+        "question": "Which of these countries have a monarchy as their form of government?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Sweden",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "Lithuania"
+          },
+          {
+            "id": 3,
+            "option": "France"
+          },
+          {
+            "id": 4,
+            "option": "Japan",
+            "isAnswer": true
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 9,
+        "type": "checkbox",
+        "question": "Which of these countries have a coastline on the Mediterranean Sea?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Egypt",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "Portugal"
+          },
+          {
+            "id": 3,
+            "option": "Turkey",
+            "isAnswer": true
+          },
+          {
+            "id": 4,
+            "option": "Morocco",
+            "isAnswer": true
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Which of these countries are members of the European Union?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Turkey"
+          },
+          {
+            "id": 2,
+            "option": "Norway"
+          },
+          {
+            "id": 3,
+            "option": "Croatia",
+            "isAnswer": true
+          },
+          {
+            "id": 4,
+            "option": "Switzerland"
+          }
+        ],
+        "point": 10
       }
     ],
     "entertaintment": [
       {
         "id": 1,
-        "question": "This is Entertainment!",
+        "type": "radio",
+        "question": "What is the name of the longest river in the world?",
         "options": [
           {
             "id": 1,
-            "option": "12",
+            "option": "Amazon"
+          },
+          {
+            "id": 2,
+            "option": "Yangtze"
+          },
+          {
+            "id": 3,
+            "option": "Mississippi"
+          },
+          {
+            "id": 4,
+            "option": "Nile",
+            "isAnswer": true
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 2,
+        "type": "radio",
+        "question": "Which of these continents is the smallest in terms of land area?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Europe"
+          },
+          {
+            "id": 2,
+            "option": "Australia",
+            "isAnswer": true
+          },
+          {
+            "id": 3,
+            "option": "Antarctica"
+          },
+          {
+            "id": 4,
+            "option": "South America"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 3,
+        "type": "radio",
+        "question": "Which of these oceans is the largest by surface area?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Atlantic"
+          },
+          {
+            "id": 2,
+            "option": "Pacific",
+            "isAnswer": true
+          },
+          {
+            "id": 3,
+            "option": "Indian"
+          },
+          {
+            "id": 4,
+            "option": "Arctic"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 4,
+        "type": "radio",
+        "question": "Which of these islands is the largest in the world?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Greenland",
             "isAnswer": true
           },
           {
             "id": 2,
-            "option": "7"
+            "option": "Madagascar"
           },
           {
             "id": 3,
-            "option": "0"
+            "option": "Borneo"
+          },
+          {
+            "id": 4,
+            "option": "New Guinea"
           }
         ],
-        "point": 30
+        "point": 10
+      },
+      {
+        "id": 5,
+        "type": "radio",
+        "question": "How many meters is Everest, the highest mountain in the world?",
+        "options": [
+          {
+            "id": 1,
+            "option": "8.849",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "8.859"
+          },
+          {
+            "id": 3,
+            "option": "8.869"
+          },
+          {
+            "id": 4,
+            "option": "8.869"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 6,
+        "type": "radio",
+        "question": "Which of these cities is the most southerly in the world?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Ushuaia",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "Cape Town"
+          },
+          {
+            "id": 3,
+            "option": "Christchurch"
+          },
+          {
+            "id": 4,
+            "option": "Punta Arenas"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 7,
+        "type": "checkbox",
+        "question": "Which of these countries are located in both Europe and Asia?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Kazakhstan",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "Ukraine"
+          },
+          {
+            "id": 3,
+            "option": "Turkey",
+            "isAnswer": true
+          },
+          {
+            "id": 4,
+            "option": "Belarus"
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 8,
+        "type": "checkbox",
+        "question": "Which of these countries have a monarchy as their form of government?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Sweden",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "Lithuania"
+          },
+          {
+            "id": 3,
+            "option": "France"
+          },
+          {
+            "id": 4,
+            "option": "Japan",
+            "isAnswer": true
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 9,
+        "type": "checkbox",
+        "question": "Which of these countries have a coastline on the Mediterranean Sea?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Egypt",
+            "isAnswer": true
+          },
+          {
+            "id": 2,
+            "option": "Portugal"
+          },
+          {
+            "id": 3,
+            "option": "Turkey",
+            "isAnswer": true
+          },
+          {
+            "id": 4,
+            "option": "Morocco",
+            "isAnswer": true
+          }
+        ],
+        "point": 10
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Which of these countries are members of the European Union?",
+        "options": [
+          {
+            "id": 1,
+            "option": "Turkey"
+          },
+          {
+            "id": 2,
+            "option": "Norway"
+          },
+          {
+            "id": 3,
+            "option": "Croatia",
+            "isAnswer": true
+          },
+          {
+            "id": 4,
+            "option": "Switzerland"
+          }
+        ],
+        "point": 10
       }
     ]
   },
@@ -1004,14 +2421,7 @@
           "score": 0,
           "isCompleted": false,
           "step": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": [],
-            "6": [],
-            "7": [],
-            "time": 24
+
           }
         }
       },
