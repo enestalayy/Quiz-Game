@@ -2414,15 +2414,14 @@
             "1": 2,
             "2": 4,
             "3": [],
-            "4": null
+            "4": [],
+            "time": 56
           }
         },
         "geography": {
           "score": 0,
           "isCompleted": false,
-          "step": {
-
-          }
+          "step": {}
         }
       },
       "id": 8
