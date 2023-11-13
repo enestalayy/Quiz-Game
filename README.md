@@ -14,18 +14,34 @@ To run the project on your local machine, follow the steps below.
 - Node.js
 - npm
 
-### Installation
+## Installation
 
-- Clone this repository.
-- ```bash
-- git clone https://github.com/enestalayy/Quiz-Game.git
-- cd quiz-game
-- npm install
-- npm start
+Follow these steps to set up and run the project locally:
 
-#### Features
+1. Clone this repository.
+    ```bash
+    git clone https://github.com/enestalayy/Quiz-Game.git
+    ```
 
-##### 1. Form Error Display
+2. Navigate to the project directory.
+    ```bash
+    cd quiz-game
+    ```
+
+3. Install dependencies.
+    ```bash
+    npm install
+    ```
+
+4. Start the application.
+    ```bash
+    npm start
+    ```
+
+
+## Features
+
+### 1. Form Error Display
 
 This feature enhances the user experience by providing real-time feedback on form validation. Key aspects include:
 
@@ -37,7 +53,7 @@ This feature enhances the user experience by providing real-time feedback on for
 
 ---
 
-##### 2. Save and Resume Session
+### 2. Save and Resume Session
 
 This feature automatically saves all user selections and data while filling out the form, allowing the user to resume from where they left off upon logging out. Key features include:
 
@@ -49,7 +65,7 @@ This feature automatically saves all user selections and data while filling out 
 
 ---
 
-##### 3. Keyboard-Only Interaction (Keydown Feature)
+### 3. Keyboard-Only Interaction (Keydown Feature)
 
 This feature enhances the user experience by providing full functionality through keyboard-only interactions. Users can perform various tasks using keyboard shortcuts, especially with arrow keys, ensuring a seamless and accessible experience. Key functionalities include:
 
@@ -65,7 +81,7 @@ This feature enhances the user experience by providing full functionality throug
 
 ---
 
-##### 4. Secure User Data Storage with Session Storage
+### 4. Secure User Data Storage with Session Storage
 
 To ensure a secure and seamless user experience, the project employs Session Storage for storing user data such as IDs, passwords, and usernames directly in the browser. The primary motivations for utilizing Session Storage are:
 
@@ -81,7 +97,7 @@ To ensure a secure and seamless user experience, the project employs Session Sto
 
 ---
 
-##### 5. Diverse Question Types and Answer Options
+### 5. Diverse Question Types and Answer Options
 
 Enhancing the quiz experience, the project incorporates three distinct question types, each with unique answer selection methods. This feature adds variety and fun for users by presenting questions in different styles:
 
@@ -95,7 +111,7 @@ This diversity in question types not only adds an element of surprise but also c
 
 ---
 
-##### 6. Enhanced Scoreboard Display
+### 6. Enhanced Scoreboard Display
 
 In the scoreboard section, special attention has been given to providing users with a personalized and intuitive experience. This feature ensures users can easily identify their own entries and customize their view based on preferences:
 
@@ -111,7 +127,7 @@ This thoughtful design in the scoreboard feature contributes to a user-friendly 
 
 ---
 
-###### Technologies
+## Technologies
 
 This project utilizes a variety of technologies and libraries to create a seamless and engaging user experience. Here is a list of the main technologies and dependencies used:
 
