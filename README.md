@@ -121,10 +121,9 @@ In the scoreboard section, special attention has been given to providing users w
 
 - **Sortable Scoreboard:** The scoreboard can be sorted based on different criteria such as username or score. Users can easily toggle between sorting options, providing a dynamic and customizable viewing experience.
 
-This thoughtful design in the scoreboard feature contributes to a user-friendly interface, making it easy for users to track their progress and engage with the content.
-
-    ![Scoreboard](src/media/scoreboard.gif)
-
+<p align="center">
+  <img width="80%" src="src/media/scoreboard.gif" alt="Scoreboard">
+</p>
 ---
 
 ## Technologies
