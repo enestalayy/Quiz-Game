@@ -3,7 +3,7 @@
 ## Overview
 This project includes an interactive quiz game. Users can test their knowledge by answering questions in different categories. User accounts are created, and answers for each question in the categories are saved under that account. The application is also preview-friendly. Completed categories can be viewed on the scoreboard page, allowing users to compare their scores.
 
-![Quiz Game](src/gif/quiz-game.gif)
+![Quiz Game](src/media/quiz-game.gif)
 
 ## Getting Started
 
@@ -33,7 +33,7 @@ This feature enhances the user experience by providing real-time feedback on for
 
 - **On Focus Error Concealment:**  To maintain a clean and unobtrusive interface, error messages disappear as soon as a user interacts with the form element (onFocus).
 
-    ![Form Error Display](src/gif/form-errors.gif)
+    ![Form Error Display](src/media/form-errors.gif)
 
 ---
 
@@ -45,7 +45,7 @@ This feature automatically saves all user selections and data while filling out 
 
 - **Resume Capability:** Users can seamlessly continue from where they left off during their next visit. They can review previous selections, remaining time, and completed questions for a smooth experience.
 
-    ![Save and Resume Session](src/gif/form-errors.gif)
+    ![Save and Resume Session](src/media/save-resume.gif)
 
 ---
 
@@ -61,7 +61,7 @@ This feature enhances the user experience by providing full functionality throug
 
 - **Scoreboard Interaction:** Change categories and sorting options on the scoreboard without relying on mouse input.
 
-    ![Keyboard-Only Interaction](path/to/keyboard-only-interaction.gif)
+    ![Keyboard-Only Interaction](src/media/keyboard.gif)
 
 ---
 
@@ -93,11 +93,9 @@ Enhancing the quiz experience, the project incorporates three distinct question 
 
 This diversity in question types not only adds an element of surprise but also caters to different preferences and learning styles.
 
-    ![Question Types](path/to/question-types.gif)
-
 ---
 
-##### 7. Enhanced Scoreboard Display
+##### 6. Enhanced Scoreboard Display
 
 In the scoreboard section, special attention has been given to providing users with a personalized and intuitive experience. This feature ensures users can easily identify their own entries and customize their view based on preferences:
 
@@ -109,7 +107,7 @@ In the scoreboard section, special attention has been given to providing users w
 
 This thoughtful design in the scoreboard feature contributes to a user-friendly interface, making it easy for users to track their progress and engage with the content.
 
-    ![Scoreboard](path/to/scoreboard.gif)
+    ![Scoreboard](src/media/scoreboard.gif)
 
 ---
 
