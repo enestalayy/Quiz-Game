@@ -50,7 +50,7 @@ This feature enhances the user experience by providing real-time feedback on for
 - **On Focus Error Concealment:**  To maintain a clean and unobtrusive interface, error messages disappear as soon as a user interacts with the form element (onFocus).
 
     <p align="center">
-    <img width="70%" src="src/media/form-errors.gif." alt="form-errors">
+    <img width="70%" src="src/media/form-errors.gif" alt="form-errors">
     </p>
 ---
 
@@ -63,7 +63,7 @@ This feature automatically saves all user selections and data while filling out 
 - **Resume Capability:** Users can seamlessly continue from where they left off during their next visit. They can review previous selections, remaining time, and completed questions for a smooth experience.
 
     <p align="center">
-    <img width="70%" src="src/media/save-resume.gif.gif" alt="Save-Resume">
+    <img width="70%" src="src/media/save-resume.gif" alt="Save-Resume">
     </p>
 ---
 
