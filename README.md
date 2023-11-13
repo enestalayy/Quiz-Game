@@ -49,8 +49,9 @@ This feature enhances the user experience by providing real-time feedback on for
 
 - **On Focus Error Concealment:**  To maintain a clean and unobtrusive interface, error messages disappear as soon as a user interacts with the form element (onFocus).
 
-    ![Form Error Display](src/media/form-errors.gif)
-
+    <p align="center">
+    <img width="70%" src="src/media/form-errors.gif." alt="form-errors">
+    </p>
 ---
 
 ### 2. Save and Resume Session
@@ -61,8 +62,9 @@ This feature automatically saves all user selections and data while filling out 
 
 - **Resume Capability:** Users can seamlessly continue from where they left off during their next visit. They can review previous selections, remaining time, and completed questions for a smooth experience.
 
-    ![Save and Resume Session](src/media/save-resume.gif)
-
+    <p align="center">
+    <img width="70%" src="src/media/save-resume.gif.gif" alt="Save-Resume">
+    </p>
 ---
 
 ### 3. Keyboard-Only Interaction (Keydown Feature)
@@ -77,8 +79,9 @@ This feature enhances the user experience by providing full functionality throug
 
 - **Scoreboard Interaction:** Change categories and sorting options on the scoreboard without relying on mouse input.
 
-    ![Keyboard-Only Interaction](src/media/keyboard.gif)
-
+    <p align="center">
+    <img width="70%" src="src/media/keyboard.gif" alt="Keyboard">
+    </p>
 ---
 
 ### 4. Secure User Data Storage with Session Storage
@@ -122,7 +125,7 @@ In the scoreboard section, special attention has been given to providing users w
 - **Sortable Scoreboard:** The scoreboard can be sorted based on different criteria such as username or score. Users can easily toggle between sorting options, providing a dynamic and customizable viewing experience.
 
 <p align="center">
-  <img width="80%" src="src/media/scoreboard.gif" alt="Scoreboard">
+  <img width="70%" src="src/media/scoreboard.gif" alt="Scoreboard">
 </p>
 ---
 
