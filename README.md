@@ -1,5 +1,20 @@
 # Quiz Game Project With React
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Getting Started](#getting-started)
+  - [Requirements](#requirements)
+  - [Installation](#installation)
+- [Features](#features)
+  - [1. Form Error Display](#1-form-error-display)
+  - [2. Save and Resume Session](#2-save-and-resume-session)
+  - [3. Keyboard-Only Interaction (Keydown Feature)](#3-keyboard-only-interaction-keydown-feature)
+  - [4. Secure User Data Storage with Session Storage](#4-secure-user-data-storage-with-session-storage)
+  - [5. Diverse Question Types and Answer Options](#5-diverse-question-types-and-answer-options)
+  - [6. Enhanced Scoreboard Display](#6-enhanced-scoreboard-display)
+- [Technologies](#technologies)
+
 ## Overview
 This project includes an interactive quiz game. Users can test their knowledge by answering questions in different categories. User accounts are created, and answers for each question in the categories are saved under that account. The application is also preview-friendly. Completed categories can be viewed on the scoreboard page, allowing users to compare their scores.
 
@@ -44,6 +59,9 @@ Follow these steps to set up and run the project locally:
 ### 1. Form Error Display
 
 This feature enhances the user experience by providing real-time feedback on form validation. Key aspects include:
+
+- *Clean Touch Dirty Perspective:*
+Angular's clean touch dirty perspective has been considered in the implementation of form error display, ensuring a smooth and efficient user interaction.
 
 - **On Blur Error Display:** When a form element loses focus (onBlur), the application performs data validation. If an error is detected, relevant error messages are dynamically displayed.
 
