@@ -152,13 +152,13 @@ const QuizProgress = ({questions, currentQuestion, setCurrentQuestion} ) => {
             ?
             <select
             name="answer"
-            className="optionInput"
+            className="optionInput optionSelect"
             onChange={((e) => setSelectedOptionId(e.target.value))}
             value={selectedOptionId || ''}
             >
 
               {questions[currentQuestion].options.map((option) => (
-                <option key={option.id} value={option.id}>
+                <option className="optionSelect" key={option.id} value={option.id}>
                 {option.option}
                 </option>
               ))}

@@ -65,7 +65,7 @@ function Register() {
     const errorListUsername = error.map((message, index) => (
       <li key={index}>{message}</li>
     ));
-    usernameError && setUsernameErrorHidden(false);
+    setUsernameErrorHidden(false);
     errorListUsername.length > 1 && true ? setUsernameError(<ul>{errorListUsername}</ul>) : setUsernameError('')
   }
 
@@ -103,7 +103,7 @@ function Register() {
             Username*
           </label>
           <UserName
-           inputChange={(value) => {setUsername(value); setUsernameErrorHidden(false)}} onBlur={usernameExists} onFocus={() => usernameError && setUsernameErrorHidden(true)}/>
+           inputChange={(value) => {setUsername(value); setUsernameErrorHidden(true)}} onBlur={usernameExists} onFocus={() => usernameError && setUsernameErrorHidden(true)}/>
           <div style={{display: usernameErrorHidden ? "none" : "block"}} className="listErrorBox">{usernameError && <div id="usernameError" className="listError"> <BiErrorAlt className="errorIcon" />{usernameError}</div>}</div>
 
         </div>

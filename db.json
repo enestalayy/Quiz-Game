@@ -2060,7 +2060,7 @@
       "id": 1,
       "quizData": {
         "math": {
-          "score": 260,
+          "score": 60,
           "isCompleted": true,
           "step": {
             "1": 1,
@@ -2079,7 +2079,7 @@
           }
         },
         "geography": {
-          "score": 220,
+          "score": 80,
           "isCompleted": true,
           "step": {
             "1": 1,
@@ -2109,28 +2109,28 @@
           }
         },
         "science": {
-          "score": 30,
+          "score": 40,
           "isCompleted": true,
           "step": {
             "1": 1
           }
         },
         "history": {
-          "score": 30,
+          "score": 60,
           "isCompleted": true,
           "step": {
             "1": 1
           }
         },
         "sport": {
-          "score": 30,
+          "score": 50,
           "isCompleted": true,
           "step": {
             "1": 1
           }
         },
         "entertaintment": {
-          "score": 0,
+          "score": 40,
           "isCompleted": true,
           "step": {
             "1": 2
@@ -2146,7 +2146,7 @@
       "gender": "Male",
       "quizData": {
         "math": {
-          "score": 220,
+          "score": 60,
           "isCompleted": true,
           "step": {
             "1": 1,
@@ -2169,7 +2169,7 @@
           }
         },
         "geography": {
-          "score": 100,
+          "score": 90,
           "isCompleted": true,
           "step": {
             "1": 1,
@@ -2185,14 +2185,14 @@
           }
         },
         "history": {
-          "score": 30,
+          "score": 50,
           "isCompleted": true,
           "step": {
             "1": 1
           }
         },
         "entertaintment": {
-          "score": 0,
+          "score": 60,
           "isCompleted": true,
           "step": {
             "1": 2
@@ -2209,7 +2209,7 @@
       "gender": "Male",
       "quizData": {
         "math": {
-          "score": 140,
+          "score": 40,
           "isCompleted": true,
           "step": {
             "1": 1,
@@ -2225,14 +2225,14 @@
           }
         },
         "entertaintment": {
-          "score": 30,
+          "score": 20,
           "isCompleted": true,
           "step": {
             "1": 1
           }
         },
         "geography": {
-          "score": 300,
+          "score": 30,
           "isCompleted": true,
           "step": {
             "1": 1,
@@ -2249,7 +2249,7 @@
           }
         },
         "general knowledge": {
-          "score": 30,
+          "score": 40,
           "isCompleted": true,
           "step": {
             "1": 2,
@@ -2257,7 +2257,7 @@
           }
         },
         "sport": {
-          "score": 30,
+          "score": 60,
           "isCompleted": true,
           "step": {
             "1": 1
@@ -2274,7 +2274,7 @@
       "gender": "",
       "quizData": {
         "math": {
-          "score": 180,
+          "score": 70,
           "isCompleted": true,
           "step": {
             "1": "1",
@@ -2305,7 +2305,7 @@
           }
         },
         "geography": {
-          "score": 0,
+          "score": 60,
           "isCompleted": false,
           "step": {
             "1": [],
@@ -2316,7 +2316,7 @@
           }
         },
         "art": {
-          "score": 0,
+          "score": 40,
           "isCompleted": true,
           "step": {
             "1": [
@@ -2326,61 +2326,6 @@
         }
       },
       "id": 4
-    },
-    {
-      "username": "zort",
-      "password": "zort1234%",
-      "phoneNumber": "",
-      "email": "",
-      "gender": "",
-      "quizData": {},
-      "id": 5
-    },
-    {
-      "username": "zortingen",
-      "password": "zortingen5%",
-      "phoneNumber": "",
-      "email": "",
-      "gender": "",
-      "quizData": {
-        "science": {
-          "score": 0,
-          "isCompleted": false,
-          "step": {
-            "1": [],
-            "time": 55
-          }
-        },
-        "art": {
-          "score": 0,
-          "isCompleted": false,
-          "step": {
-            "1": [],
-            "time": 53
-          }
-        },
-        "math": {
-          "score": 30,
-          "isCompleted": false,
-          "step": {
-            "1": 1,
-            "2": [],
-            "time": 60
-          }
-        },
-        "geography": {
-          "score": 0,
-          "isCompleted": false,
-          "step": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "time": 60
-          }
-        }
-      },
-      "id": 6
     },
     {
       "username": "port",
@@ -2401,21 +2346,35 @@
       "id": 7
     },
     {
-      "username": "poly",
-      "password": "poly1234%",
+      "username": "user",
+      "password": "user1234%",
       "phoneNumber": "",
       "email": "",
       "gender": "",
       "quizData": {
         "math": {
-          "score": 0,
-          "isCompleted": false,
+          "score": 50,
+          "isCompleted": true,
           "step": {
             "1": 2,
             "2": 4,
             "3": [],
-            "4": [],
-            "time": 56
+            "4": 1,
+            "5": 1,
+            "6": [],
+            "7": [
+              1,
+              3
+            ],
+            "8": [
+              2,
+              3
+            ],
+            "9": [
+              1,
+              2
+            ],
+            "10": "3"
           }
         },
         "geography": {
@@ -2425,6 +2384,41 @@
         }
       },
       "id": 8
+    },
+    {
+      "username": "user01",
+      "password": "user015%",
+      "phoneNumber": "+61",
+      "email": "",
+      "gender": "",
+      "quizData": {
+        "math": {
+          "score": 20,
+          "isCompleted": true,
+          "step": {
+            "1": 2,
+            "2": 1,
+            "3": 3,
+            "4": 3,
+            "5": [],
+            "6": 2,
+            "7": [
+              1,
+              3
+            ],
+            "8": [
+              1,
+              2
+            ],
+            "9": [
+              2,
+              3
+            ],
+            "10": "3"
+          }
+        }
+      },
+      "id": 9
     }
   ]
 }
